@@ -22,7 +22,10 @@ sistema:
 
 ## dataset
 
-Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT - (anno 2018 - [versione non generalizzata](https://www4.istat.it/it/archivio/209722))
+Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT - (anno 2018 - [versione non generalizzata](https://www4.istat.it/it/archivio/209722)) cartella Com01012018.
+
+* qui shapefile
+* qui db sqlite
 
 ## software GIS
 
