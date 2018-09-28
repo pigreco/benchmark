@@ -29,9 +29,9 @@ Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT -
 
 ## software GIS
 
-* QGIS 2.18.24, 3.2.3, 3.3 master
-* R 3.5.1 + RStudio 1.1.456 
-* SpatiaLite_gui 2.10
+* [QGIS](https://qgis.org/it/site/) 2.18.24, 3.2.3, 3.3 master
+* [R](https://www.r-project.org/) 3.5.1 + [RStudio](https://www.rstudio.com/products/rstudio/download/) 1.1.456 (nella console: install.packages("rgdal") e poi install.packages("GISTools") )
+* SpatiaLite_gui [2.10](http://www.gaia-gis.it/gaia-sins/windows-bin-NEXTGEN-amd64/)
 * PostgreSQL9.3/PostGIS 2.2.3
 * Mapshaper 0.4.94 (riga di comando - GNU/Linux - Ubuntu 16.4 in Win10 64b)
 
