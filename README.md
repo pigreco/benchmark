@@ -35,6 +35,13 @@ Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT -
 * [PostgreSQL](https://www.postgresql.org/) 9.3/PostGIS 2.2.3
 * [Mapshaper](https://mapshaper.org/) 0.4.94 (riga di comando - GNU/Linux - Ubuntu 16.4 in Win10 64b)
 
+```
+sudo npm install -g mapshapersudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo npm install -g mapshaper
+```
+
 ## prove
 
 1. estrai vertici;
