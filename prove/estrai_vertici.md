@@ -22,6 +22,8 @@ dataset: db sqlite con spatialidex
 
 ![](../img/qgis33_master_info.png)
 
+NB: Il debug rallenta le prestazioni!!!
+
 ![](../img/estrai_vertici/qgis33master_01.png)
 
 ![](../img/estrai_vertici/qgis33master_02.png)

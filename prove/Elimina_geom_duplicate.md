@@ -24,6 +24,8 @@ dataset: db sqlite con spatialidex
 
 ![](../img/qgis33_master_info.png)
 
+NB: Il debug rallenta le prestazioni!!!
+
 ![](../img/estrai_vertici/qgis33master_03.png)
 
 ![](../img/estrai_vertici/qgis33master_04.png)
@@ -53,5 +55,5 @@ tempo [sec]|programma
 :---------:|---------
 ???|QGIS 2.18.24
 ???|QGIS 3.2.3
-???|QGIS 3.3 master
+???|QGIS 3.3 master con debug
 393| SpatiaLite_GUI 2.10 senza spatialIndex
