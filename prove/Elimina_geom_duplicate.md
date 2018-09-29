@@ -45,11 +45,34 @@ SELECT distinct geometry
 FROM vertici;
 SELECT RecoverGeometryColumn('vertici_ok','geometry',32632,'POINT','XY');
 ```
+NB: il **select distinct** NON è preciso (1e-5)
+
 ![](../img/estrai_vertici/spatialite_gui_210_04.png)
 
 ![](../img/estrai_vertici/spatialite_gui_210_02.png)
 
-# RISULTATI
+## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
+
+![](../img/pgAmin3_info.png)
+
+![](../img/estrai_vertici/pgAmin3_02.png)
+
+```
+SELECT DISTINCT ON (ST_AsBinary(geom)) geom 
+FROM vertici_dump;
+```
+
+![](../img/estrai_vertici/pgAmin3_03.png)
+
+```
+SELECT geom, count(*) as nro
+FROM vertici_dump
+GROUP BY 1
+HAVING count(*) > 1
+ORDER BY count(*) DESC;
+```
+
+# RISULTATI (LZ50)
 
 tempo [sec]|programma
 :---------:|---------
@@ -57,3 +80,6 @@ tempo [sec]|programma
 ???|QGIS 3.2.3
 ???|QGIS 3.3 master con debug
 302| SpatiaLite_GUI 2.10 no spatialIndex
+134|pgAdmin 3 con spatialIndex
+??|mapshaper
+??|R + RStudio

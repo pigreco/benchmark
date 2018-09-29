@@ -44,11 +44,25 @@ SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , '
 ```
 ![](../img/estrai_vertici/spatialite_gui_210_03.png)
 
-# RISULTATI
+## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
+
+![](../img/pgAmin3_info.png)
+
+```
+CREATE TABLE vertici_dump AS
+SELECT k."PK_UID", k.geom  
+FROM ( SELECT (ST_DumpPoints(geom)).*, "PK_UID" FROM comuni )k;
+```
+![](../img/estrai_vertici/pgAmin3_01.png)
+
+# RISULTATI (LZ50) - estrai vertici
 
 tempo [sec]|programma
 :---------:|---------
 123|QGIS 2.18.24
 66|QGIS 3.2.3
 95|QGIS 3.3 master con debug
-340| SpatiaLite_GUI 2.10 no spatialIndex
+340|SpatiaLite_GUI 2.10 no spatialIndex
+20|pgAdmin 3 con spatialIndex
+??|mapshaper
+??|R + RStudio
