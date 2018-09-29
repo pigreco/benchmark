@@ -45,7 +45,7 @@ SELECT distinct geometry
 FROM vertici;
 SELECT RecoverGeometryColumn('vertici_ok','geometry',32632,'POINT','XY');
 ```
-![](../img/estrai_vertici/spatialite_gui_210_00.png)
+![](../img/estrai_vertici/spatialite_gui_210_04.png)
 
 ![](../img/estrai_vertici/spatialite_gui_210_02.png)
 
@@ -56,4 +56,4 @@ tempo [sec]|programma
 ???|QGIS 2.18.24
 ???|QGIS 3.2.3
 ???|QGIS 3.3 master con debug
-393| SpatiaLite_GUI 2.10 senza spatialIndex
+302| SpatiaLite_GUI 2.10 no spatialIndex

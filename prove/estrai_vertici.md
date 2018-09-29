@@ -42,11 +42,7 @@ SELECT RecoverGeometryColumn('vertici_com','geometry',32632,'MULTIPOINT','XY');
 -- Esplodo i vertici MultiPoint
 SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
 ```
-![](../img/estrai_vertici/spatialite_gui_210_00.png)
-
-![](../img/estrai_vertici/spatialite_gui_210_01.png)
-
-![](../img/estrai_vertici/spatialite_gui_210_02.png)
+![](../img/estrai_vertici/spatialite_gui_210_03.png)
 
 # RISULTATI
 
@@ -55,4 +51,4 @@ tempo [sec]|programma
 123|QGIS 2.18.24
 66|QGIS 3.2.3
 95|QGIS 3.3 master con debug
-241| SpatiaLite_GUI 2.10 no spatialIndex
+340| SpatiaLite_GUI 2.10 no spatialIndex
