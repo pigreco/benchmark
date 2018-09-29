@@ -4,15 +4,15 @@ dataset: db sqlite con spatialidex
 
 ## QGIS 2.18.24
 
-![](../img/qgis21824_master_info.png)
+![](../img/qgis21824_info.png)
 
-![](../img/estrai_vertici/qgis21824master_01.png)
+![](../img/estrai_vertici/qgis21824_01.png)
 
-![](../img/estrai_vertici/qgis21824master_02.png)
+![](../img/estrai_vertici/qgis21824_02.png)
 
 **Elimina geometrie duplicate** è un algoritmo inefficiente (problema risolto nella prossima 3.4), nessun risultato dopo oltre 30 minuti, quindi è stato bloccato:
 
-![](../img/estrai_vertici/qgis21824master_03.png)
+![](../img/estrai_vertici/qgis21824_03.png)
 
 ## ## QGIS 3.2.3
 
