@@ -53,4 +53,4 @@ sudo npm install -g mapshaper
 
 ## come eseguire le prove
 
-È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test.
+È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va ripetuta due volte e il valore espresso in secondi.
