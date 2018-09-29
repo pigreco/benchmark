@@ -65,6 +65,16 @@ FROM vertici_dump;
 ![](../img/estrai_vertici/pgAmin3_03.png)
 
 ```
+SELECT * 
+FROM 
+(
+SELECT id, ROW_NUMBER() OVER(PARTITION BY geom ORDER BY id ASC) AS Row,geom 
+FROM ONLY vertici_dump
+) dups 
+WHERE dups.Row > 1
+```
+la seguente restituisce valori diversi, perché?
+```
 SELECT geom, count(*) as nro
 FROM vertici_dump
 GROUP BY 1
@@ -72,7 +82,7 @@ HAVING count(*) > 1
 ORDER BY count(*) DESC;
 ```
 
-# RISULTATI (LZ50)
+# RISULTATI (LZ50) -elimina geometrie duplicate
 
 tempo [sec]|programma
 :---------:|---------
