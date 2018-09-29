@@ -1,4 +1,4 @@
-# estrai vertici
+# estrai vertici (LZ50)
 
 dataset: db sqlite con spatialidex
 
@@ -60,6 +60,17 @@ SELECT RecoverGeometryColumn('vertici_ok','geometry',32632,'POINT','XY');
 ```
 ![](../img/spatialite_gui_210_info.png)
 
+![](../img/estrai_vertici/spatialite_gui_210_00.png)
+
 ![](../img/estrai_vertici/spatialite_gui_210_01.png)
 
 ![](../img/estrai_vertici/spatialite_gui_210_02.png)
+
+# RISULTATI
+
+tempo [sec]|programma
+-----------|---------
+123|QGIS 2.18.24
+66|QGIS 3.2.3
+95|QGIS 3.3 master
+393| SpatiaLite_GUI 2.10 senza spatialIndex
