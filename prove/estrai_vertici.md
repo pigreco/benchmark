@@ -11,7 +11,6 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
-    - [Dati](#dati)
 
 <!-- /TOC -->
 
@@ -80,13 +79,3 @@ tempo [sec]|programma
 21|pgAdmin 3 con spatialIndex
 ??|mapshaper
 ??|R + RStudio
-
-## Dati
-
-comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
--------------|-----------|----------------|--------------
-7960 MultiPolygon|4.901.723|2.631.955|2.269.768
-
-Da QGIS:
-
-![](../img/estrai_vertici/qgis33master_06.png)

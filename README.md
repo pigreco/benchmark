@@ -27,6 +27,16 @@ Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT -
 * [qui](https://mega.nz/#!BApjSCJT!kSPF01S_BPEpK_ErYEx1Jse4XWjV52oA0iS0dgxZU5o) shapefile
 * [qui](https://mega.nz/#!gFglWIAC!CmDUmG4FTbEwpd7KixGmf7Zhw7kALru_2eQfzSJpL9c) db sqlite
 
+## Dati
+
+comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
+-------------|-----------|----------------|--------------
+7960 MultiPolygon|4.901.723|2.631.955|2.269.768
+
+Da QGIS:
+
+![](./img/estrai_vertici/qgis33master_06.png)
+
 ## software GIS
 
 * [QGIS](https://qgis.org/it/site/) 2.18.24, 3.2.3, 3.3 master
