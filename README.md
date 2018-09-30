@@ -44,8 +44,8 @@ sudo npm install -g mapshaper
 
 ## prove
 
-1. estrai vertici;
-2. elimina geometrie duplicate (alludo ai vertici)
+1. [estrai vertici](./prove/estrai_vertici.md);
+2. [elimina geometrie duplicate](./prove/elimina_geom_duplicate.md) (alludo ai vertici)
 3. dissolvi tutto;
 4. buffer 1 m;
 5. conta punti nel poligono (usando il buffer 1 m - vertici per comune)
