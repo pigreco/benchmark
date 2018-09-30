@@ -53,4 +53,6 @@ sudo npm install -g mapshaper
 
 ## come eseguire le prove
 
-È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va ripetuta due volte e il valore espresso in secondi.
+È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va _ripetuta due volte_ e il valore espresso in secondi.
+
+![](./img/estrai_vertici/qgis33master_07.png)

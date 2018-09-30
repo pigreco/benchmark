@@ -67,6 +67,12 @@ tempo [sec]|programma
 ??|mapshaper
 ??|R + RStudio
 
+Dati:
+
 nro vertici|nro no duplicati| nro duplicati
 -----------|----------------|--------------
 4.901.723|2.631.955|2.269.768
+
+Da QGIS:
+
+![](../img/estrai_vertici/qgis33master_06.png)
