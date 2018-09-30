@@ -27,8 +27,6 @@ Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT -
 * [qui](https://mega.nz/#!BApjSCJT!kSPF01S_BPEpK_ErYEx1Jse4XWjV52oA0iS0dgxZU5o) shapefile
 * [qui](https://mega.nz/#!gFglWIAC!CmDUmG4FTbEwpd7KixGmf7Zhw7kALru_2eQfzSJpL9c) db sqlite
 
-## Dati
-
 comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
 -------------|-----------|----------------|--------------
 7960 MultiPolygon|4.901.723|2.631.955|2.269.768
@@ -56,10 +54,10 @@ sudo npm install -g mapshaper
 
 1. [estrai vertici](./prove/estrai_vertici.md);
 2. [elimina geometrie duplicate](./prove/elimina_geom_duplicate.md) (alludo ai vertici)
-3. dissolvi tutto;
-4. buffer 1 m;
-5. conta punti nel poligono (usando il buffer 1 m - vertici per comune)
-6. spatial join (tra vertici e comuni - trasferire nome comune)
+3. [dissolvi per regione](./prove/dissolvi_regione.md);
+4. [buffer 1 m](./prove/buffer1m.md) (su dissolvi per regione);
+5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando il buffer 1 m e vertici, senza duplicati, per comune)
+6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire codice regione)
 
 ## come eseguire le prove
 
