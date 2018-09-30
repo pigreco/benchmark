@@ -83,9 +83,9 @@ tempo [sec]|programma
 
 ## Dati
 
-nro vertici|nro no duplicati| nro duplicati
------------|----------------|--------------
-4.901.723|2.631.955|2.269.768
+comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
+-------------|-----------|----------------|--------------
+7960 MultiPolygon|4.901.723|2.631.955|2.269.768
 
 Da QGIS:
 
