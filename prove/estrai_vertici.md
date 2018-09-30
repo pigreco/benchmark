@@ -2,6 +2,19 @@
 
 dataset: db sqlite con spatialidex
 
+<!-- TOC -->
+
+- [estrai vertici (LZ50)](#estrai-vertici-lz50)
+    - [QGIS 2.18.24](#qgis-21824)
+    - [QGIS 3.2.3](#qgis-323)
+    - [QGIS 3.3 master](#qgis-33-master)
+    - [SpatiaLite_GUI 2.10](#spatialitegui-210)
+    - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
+    - [Dati](#dati)
+
+<!-- /TOC -->
+
 ## QGIS 2.18.24
 
 ![](../img/qgis21824_info.png)
@@ -56,7 +69,7 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 ```
 ![](../img/estrai_vertici/pgAmin3_01.png)
 
-# RISULTATI (LZ50) - estrai vertici
+## RISULTATI (LZ50) - estrai vertici
 
 tempo [sec]|programma
 :---------:|---------
@@ -68,7 +81,7 @@ tempo [sec]|programma
 ??|mapshaper
 ??|R + RStudio
 
-Dati:
+## Dati
 
 nro vertici|nro no duplicati| nro duplicati
 -----------|----------------|--------------

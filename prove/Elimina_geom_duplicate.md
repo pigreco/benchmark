@@ -2,6 +2,18 @@
 
 dataset: db sqlite con spatialidex
 
+<!-- TOC -->
+
+- [elimina geometrie duplicate (LZ50)](#elimina-geometrie-duplicate-lz50)
+    - [QGIS 2.18.24](#qgis-21824)
+    - [QGIS 3.2.3](#qgis-323)
+    - [QGIS 3.3 master](#qgis-33-master)
+    - [SpatiaLite_GUI 2.10](#spatialitegui-210)
+    - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
+
+<!-- /TOC -->
+
 ## QGIS 2.18.24
 
 ![](../img/qgis21824_info.png)
@@ -86,7 +98,7 @@ HAVING count(*) > 1
 ORDER BY count(*) DESC;
 ```
 
-# RISULTATI (LZ50) - elimina geometrie duplicate
+## RISULTATI (LZ50) - elimina geometrie duplicate
 
 tempo [sec]|programma
 :---------:|---------
