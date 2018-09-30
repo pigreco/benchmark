@@ -10,7 +10,7 @@ dataset: db sqlite con spatialidex
     - [QGIS 3.3 master](#qgis-33-master)
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
-    - [RISULTATI (LZ50) - dissolvi_tutto](#risultati-lz50---dissolvitutto)
+    - [RISULTATI (LZ50) - buffer 1 m](#risultati-lz50---buffer-1-m)
 
 <!-- /TOC -->
 
@@ -68,7 +68,7 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 ```
 ![](../img/buffer1m/pgAmin3_01.png)
 
-## RISULTATI (LZ50) - dissolvi_tutto
+## RISULTATI (LZ50) - buffer 1 m
 
 tempo [sec]|programma
 :---------:|---------
