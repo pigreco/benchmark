@@ -82,7 +82,7 @@ HAVING count(*) > 1
 ORDER BY count(*) DESC;
 ```
 
-# RISULTATI (LZ50) -elimina geometrie duplicate
+# RISULTATI (LZ50) - elimina geometrie duplicate
 
 tempo [sec]|programma
 :---------:|---------
@@ -90,6 +90,6 @@ NO|QGIS 2.18.24
 NO|QGIS 3.2.3
 1162|QGIS 3.3 master con debug
 302| SpatiaLite_GUI 2.10 no spatialIndex
-179|pgAdmin 3 con spatialIndex
+134|pgAdmin 3 con spatialIndex
 ??|mapshaper
 ??|R + RStudio
