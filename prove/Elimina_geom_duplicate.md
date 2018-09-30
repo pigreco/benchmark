@@ -38,14 +38,15 @@ Elimino le geometrie duplicate:
 
 ```
 -- Creo tabella evitando le geometrie duplicate:
-CREATE TABLE vertici_ok as 
-SELECT distinct geometry
-FROM vertici;
+CREATE TABLE vertici_ok AS
+SELECT out_pk, geometry
+FROM vertici
+WHERE out_pk IN (SELECT min(out_pk) 
+                 FROM vertici
+                 GROUP BY geometry);
+
 SELECT RecoverGeometryColumn('vertici_ok','geometry',32632,'POINT','XY');
 ```
-NB: il **select distinct** NON è preciso (1e-5)
-
-![](../img/elimina_geom_duplicate/spatialite_gui_210_04.png)
 
 ![](../img/elimina_geom_duplicate/spatialite_gui_210_02.png)
 
@@ -56,6 +57,8 @@ NB: il **select distinct** NON è preciso (1e-5)
 ![](../img/elimina_geom_duplicate/pgAmin3_02.png)
 
 ```
+-- crea tabella con geometrie non duplicate
+CREATE TABLE vertici_ok AS
 SELECT DISTINCT ON (ST_AsBinary(geom)) geom 
 FROM vertici_dump;
 ```
@@ -63,10 +66,11 @@ FROM vertici_dump;
 ![](../img/elimina_geom_duplicate/pgAmin3_03.png)
 
 ```
+-- geometrie duplicate
 SELECT * 
 FROM 
 (
-SELECT id, ROW_NUMBER() OVER(PARTITION BY geom ORDER BY id ASC) AS Row,geom 
+SELECT gid, ROW_NUMBER() OVER(PARTITION BY geom ORDER BY gid ASC) AS Row,geom 
 FROM ONLY vertici_dump
 ) dups 
 WHERE dups.Row > 1
@@ -89,7 +93,7 @@ tempo [sec]|programma
 NO|QGIS 2.18.24
 NO|QGIS 3.2.3
 1162|QGIS 3.3 master con debug
-302| SpatiaLite_GUI 2.10 no spatialIndex
-134|pgAdmin 3 con spatialIndex
+82|SpatiaLite_GUI 2.10
+39|pgAdmin 3 con spatialIndex
 ??|mapshaper
 ??|R + RStudio

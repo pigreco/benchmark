@@ -49,9 +49,10 @@ SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , '
 ![](../img/pgAmin3_info.png)
 
 ```
+-- crea tabella vertici_dump
 CREATE TABLE vertici_dump AS
-SELECT k."PK_UID", k.geom  
-FROM ( SELECT (ST_DumpPoints(geom)).*, "PK_UID" FROM comuni )k;
+SELECT k.gid, k.geom  
+FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 ```
 ![](../img/estrai_vertici/pgAmin3_01.png)
 
@@ -62,8 +63,8 @@ tempo [sec]|programma
 123|QGIS 2.18.24
 66|QGIS 3.2.3
 95|QGIS 3.3 master con debug
-340|SpatiaLite_GUI 2.10 no spatialIndex
-20|pgAdmin 3 con spatialIndex
+340|SpatiaLite_GUI 2.10
+21|pgAdmin 3 con spatialIndex
 ??|mapshaper
 ??|R + RStudio
 
