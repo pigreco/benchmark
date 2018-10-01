@@ -10,6 +10,8 @@ dataset: db sqlite con spatialidex
     - [QGIS 3.3 master](#qgis-33-master)
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [mapshaper](#mapshaper)
+    - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
 
 <!-- /TOC -->
@@ -67,6 +69,12 @@ SELECT k.gid, k.geom
 FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 ```
 ![](../img/estrai_vertici/pgAmin3_01.png)
+
+## mapshaper
+
+
+## R + RStudio
+
 
 ## RISULTATI (LZ50) - estrai vertici
 
