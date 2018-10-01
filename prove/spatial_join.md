@@ -87,7 +87,7 @@ time node  --max-old-space-size=4192 `which mapshaper` vertici_ok.shp -join diss
 
 tempo [sec]|programma
 :---------:|---------
->600|QGIS 2.18.24
++600|QGIS 2.18.24
 565|QGIS 3.2.3
 317|QGIS 3.3 master con debug
 ??|SpatiaLite_GUI 2.10
