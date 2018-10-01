@@ -10,6 +10,7 @@ dataset: db sqlite con spatialidex
     - [QGIS 3.3 master](#qgis-33-master)
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [mapshaper - issues - grazie Andrea](#mapshaper---issues---grazie-andrea)
     - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
 
 <!-- /TOC -->
@@ -98,6 +99,15 @@ HAVING count(*) > 1
 ORDER BY count(*) DESC;
 ```
 
+## mapshaper - [issues](https://github.com/mbloch/mapshaper/issues/305) - grazie [Andrea](https://twitter.com/aborruso?lang=it)
+
+Non esiste una funzione che faccia al caso nostro, quello che segue è una forzatura e quindi i tempi sono lunghi!
+```
+time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 vertci_all.shp -explode -each 'key = this.x + "," + this.y' -uniq key -o unique_points.shp
+```
+
+![](../img/elimina_geom_duplicate/mapshaper_01.png)
+
 ## RISULTATI (LZ50) - elimina geometrie duplicate
 
 tempo [sec]|programma
@@ -107,5 +117,5 @@ NO|QGIS 3.2.3
 1162|QGIS 3.3 master con debug
 82|SpatiaLite_GUI 2.10
 39|pgAdmin 3 con spatialIndex
-??|mapshaper
+210|mapshaper
 ??|R + RStudio
