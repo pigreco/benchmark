@@ -10,6 +10,7 @@ dataset: db sqlite con spatialidex
     - [QGIS 3.3 master](#qgis-33-master)
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [mapshaper](#mapshaper)
     - [RISULTATI (LZ50) - unisci attributi per posizione](#risultati-lz50---unisci-attributi-per-posizione)
 
 <!-- /TOC -->
@@ -54,7 +55,7 @@ SELECT RecoverGeometryColumn('vertici_com','geometry',32632,'MULTIPOINT','XY');
 -- Esplodo i vertici MultiPoint
 SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
 ```
-![](../img/spatial_join/spatialite_gui_210_03.png)
+![](../img/spatial_join/spatialite_gui_210_01.png)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
@@ -68,14 +69,22 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 ```
 ![](../img/spatial_join/pgAmin3_01.png)
 
+## mapshaper
+
+```
+time node  --max-old-space-size=4192 `which mapshaper` vertici_ok.shp -join dissolto_reg_b1m.shp calc= fields=cod_reg -o out_SPATIAL_reg.shp
+```
+
+![](../img/spatial_join/mapshaper_01.png)
+
 ## RISULTATI (LZ50) - unisci attributi per posizione
 
 tempo [sec]|programma
 :---------:|---------
-123|QGIS 2.18.24
+>600|QGIS 2.18.24
 565|QGIS 3.2.3
-95|QGIS 3.3 master con debug
-340|SpatiaLite_GUI 2.10
-21|pgAdmin 3 con spatialIndex
-??|mapshaper
+317|QGIS 3.3 master con debug
+??|SpatiaLite_GUI 2.10
+??|pgAdmin 3 con spatialIndex
+335|mapshaper
 ??|R + RStudio

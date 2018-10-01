@@ -10,6 +10,7 @@ dataset: db sqlite con spatialidex
     - [QGIS 3.3 master](#qgis-33-master)
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [mapshaper](#mapshaper)
     - [RISULTATI (LZ50) - dissolvi per regione](#risultati-lz50---dissolvi-per-regione)
 
 <!-- /TOC -->
@@ -47,35 +48,42 @@ estraggo i vertici:
 ![](../img/spatialite_gui_210_info.png)
 
 ```
--- Creo tabella estraendo i vertici
-CREATE TABLE "vertici_com" AS
-SELECT ST_DissolvePoints(geometry) as geometry from Com01012018_WGS84;
-SELECT RecoverGeometryColumn('vertici_com','geometry',32632,'MULTIPOINT','XY');
--- Esplodo i vertici MultiPoint
-SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
+-- crea geotabella dissolvendo per cod_reg
+CREATE TABLE dissolve_reg AS
+SELECT cod_reg, CastToMultiPolygon(ST_Union(geometry)) AS geometry 
+FROM com01012018_wgs84;
+SELECT RecoverGeometryColumn('dissolve_reg','geometry',32632,'MULTIPOLYGON','XY');
 ```
-![](../img/dissolvi_regione/spatialite_gui_210_03.png)
+![](../img/dissolvi_regione/spatialite_gui_210_01.png)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
 ![](../img/pgAmin3_info.png)
 
 ```
--- crea tabella vertici_dump
-CREATE TABLE vertici_dump AS
-SELECT k.gid, k.geom  
-FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
+-- crea tabella dissolvi per regione
+CREATE TABLE dissolto_reg AS
+SELECT cod_reg, ST_Multi(ST_Union(geom)) AS geom  
+FROM public.com01012018_wgs84;
 ```
 ![](../img/dissolvi_regione/pgAmin3_01.png)
+
+## mapshaper 
+
+```
+time mapshaper encoding=utf-8  com01012018_wgs84.shp -dissolve cod_reg -o outdissolto_reg.shp
+```
+
+![](../img/dissolvi_regione/mapshaper_01.png)
 
 ## RISULTATI (LZ50) - dissolvi per regione
 
 tempo [sec]|programma
 :---------:|---------
-123|QGIS 2.18.24
-255|QGIS 3.2.3
-95|QGIS 3.3 master con debug
-340|SpatiaLite_GUI 2.10
-21|pgAdmin 3 con spatialIndex
-??|mapshaper
+588|QGIS 2.18.24
+253|QGIS 3.2.3
+247|QGIS 3.3 master con debug
+249|SpatiaLite_GUI 2.10
+381|pgAdmin 3 con spatialIndex
+9|mapshaper
 ??|R + RStudio
