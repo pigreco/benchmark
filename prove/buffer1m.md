@@ -74,7 +74,7 @@ tempo [sec]|programma
 :---------:|---------
 123|QGIS 2.18.24
 3.4|QGIS 3.2.3
-95|QGIS 3.3 master con debug
+3.3|QGIS 3.3 master con debug
 340|SpatiaLite_GUI 2.10
 21|pgAdmin 3 con spatialIndex
 ??|mapshaper
