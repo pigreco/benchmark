@@ -31,6 +31,8 @@ dataset: db sqlite con spatialidex
 
 ![](../img/spatial_join/qgis323_02.png)
 
+![](../img/spatial_join/qgis323_03.png)
+
 ## QGIS 3.3 master
 
 ![](../img/qgis33_master_info.png)
@@ -40,6 +42,8 @@ NB: Il debug rallenta le prestazioni!!!
 ![](../img/spatial_join/qgis33master_01.png)
 
 ![](../img/spatial_join/qgis33master_02.png)
+
+![](../img/spatial_join/qgis33master_03.png)
 
 ## SpatiaLite_GUI 2.10
 
@@ -76,6 +80,8 @@ time node  --max-old-space-size=4192 `which mapshaper` vertici_ok.shp -join diss
 ```
 
 ![](../img/spatial_join/mapshaper_01.png)
+
+![](../img/spatial_join/all.png)
 
 ## RISULTATI (LZ50) - unisci attributi per posizione
 
