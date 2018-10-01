@@ -11,7 +11,9 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
+    - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - conta punti nel poligono](#risultati-lz50---conta-punti-nel-poligono)
+    - [RISULTATI (xxx) - estrai vertici](#risultati-xxx---estrai-vertici)
 
 <!-- /TOC -->
 
@@ -22,6 +24,8 @@ dataset: db sqlite con spatialidex
 ![](../img/conta_punti_poligono/qgis21824_01.png)
 
 ![](../img/conta_punti_poligono/qgis21824_02.png)
+
+![](../img/conta_punti_poligono/conteggio21824.png)
 
 ## QGIS 3.2.3
 
@@ -40,6 +44,8 @@ NB: Il debug rallenta le prestazioni!!!
 ![](../img/conta_punti_poligono/qgis33master_01.png)
 
 ![](../img/conta_punti_poligono/qgis33master_02.png)
+
+![](../img/conta_punti_poligono/conteggio33master.png)
 
 ## SpatiaLite_GUI 2.10
 
@@ -77,6 +83,30 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 dissolto_r
 
 ![](../img/conta_punti_poligono/mapshaper_01.png)
 
+## R + RStudio
+
+Osservazione: occorrono circa 6 minuti per caricare i dati in memoria !!!
+
+```
+library(rgdal)
+library(GISTools)
+setwd("C:\\Users\\Salvatore\\Desktop\\mapshaper")
+
+punti<-readOGR("vertici_ok.shp")
+reticolo<-readOGR("dissolto_reg_b1m.shp")
+
+#### calcolo conteggio con misura tempo esecuzione #######
+start.time <- Sys.time()
+conteggio<-poly.counts(punti, reticolo)
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+```
+
+![](../img/conta_punti_poligono/r_01.png)
+
+PS: non è comprensibile l'output!!!
+
 ## RISULTATI (LZ50) - conta punti nel poligono
 
 tempo [sec]|programma
@@ -87,7 +117,7 @@ tempo [sec]|programma
 ??|SpatiaLite_GUI 2.10
 ??|pgAdmin 3 con spatialIndex
 303|mapshaper
-??|R + RStudio
+34|R + RStudio
 
 ## RISULTATI (xxx) - estrai vertici
 
