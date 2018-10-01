@@ -8,10 +8,11 @@ dataset: db sqlite con spatialidex
     - [QGIS 2.18.24](#qgis-21824)
     - [QGIS 3.2.3](#qgis-323)
     - [QGIS 3.3 master](#qgis-33-master)
-    - [SpatiaLite_GUI 2.10](#spatialitegui-210)
+    - [SpatiaLite_GUI 2.10](#spatialite_gui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
-    - [mapshaper - issues - grazie Andrea](#mapshaper---issues---grazie-andrea)
+    - [mapshaper - [issues](https://github.com/mbloch/mapshaper/issues/305) - grazie [Andrea](https://twitter.com/aborruso?lang=it)](#mapshaper---issueshttpsgithubcommblochmapshaperissues305---grazie-andreahttpstwittercomaborrusolangit)
     - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
+    - [RISULTATI (xxx) - estrai vertici](#risultati-xxx---estrai-vertici)
 
 <!-- /TOC -->
 
@@ -119,3 +120,15 @@ NO|QGIS 3.2.3
 39|pgAdmin 3 con spatialIndex
 210|mapshaper
 ??|R + RStudio
+
+## RISULTATI (xxx) - estrai vertici
+
+tempo [sec]|programma
+:---------:|---------
+sss|QGIS 2.18.24
+sss|QGIS 3.2.3
+sss|QGIS 3.3 master con debug
+sss|SpatiaLite_GUI 2.10
+sss|pgAdmin 3 con spatialIndex
+sss|mapshaper
+sss|R + RStudio

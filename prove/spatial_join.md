@@ -12,6 +12,7 @@ dataset: db sqlite con spatialidex
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
     - [RISULTATI (LZ50) - unisci attributi per posizione](#risultati-lz50---unisci-attributi-per-posizione)
+    - [RISULTATI (xxx) - estrai vertici](#risultati-xxx---estrai-vertici)
 
 <!-- /TOC -->
 
@@ -88,3 +89,15 @@ tempo [sec]|programma
 ??|pgAdmin 3 con spatialIndex
 335|mapshaper
 ??|R + RStudio
+
+## RISULTATI (xxx) - estrai vertici
+
+tempo [sec]|programma
+:---------:|---------
+sss|QGIS 2.18.24
+sss|QGIS 3.2.3
+sss|QGIS 3.3 master con debug
+sss|SpatiaLite_GUI 2.10
+sss|pgAdmin 3 con spatialIndex
+sss|mapshaper
+sss|R + RStudio
