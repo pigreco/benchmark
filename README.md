@@ -59,6 +59,8 @@ sudo npm install -g mapshaper
 5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando il buffer 1 m e vertici, senza duplicati, per comune)
 6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire codice regione)
 
+[Quadro sinottico](./quadro_sinottico.md)
+
 ## come eseguire le prove
 
 È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va _ripetuta due volte_ e il valore espresso in secondi.
