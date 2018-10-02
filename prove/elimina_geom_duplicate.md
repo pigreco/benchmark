@@ -11,6 +11,7 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper - issues - grazie Andrea](#mapshaper---issues---grazie-andrea)
+    - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
 
 <!-- /TOC -->
@@ -107,6 +108,10 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 vertci_all
 ```
 
 ![](../img/elimina_geom_duplicate/mapshaper_01.png)
+
+## R + RStudio
+
+
 
 ## RISULTATI (LZ50) - elimina geometrie duplicate
 

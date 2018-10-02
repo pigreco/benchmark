@@ -11,6 +11,7 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
+    - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - unisci attributi per posizione](#risultati-lz50---unisci-attributi-per-posizione)
 
 <!-- /TOC -->
@@ -76,6 +77,10 @@ time node  --max-old-space-size=4192 `which mapshaper` vertici_ok.shp -join diss
 ![](../img/spatial_join/mapshaper_01.png)
 
 ![](../img/spatial_join/all.png)
+
+## R +  RStudio
+
+
 
 ## RISULTATI (LZ50) - unisci attributi per posizione
 

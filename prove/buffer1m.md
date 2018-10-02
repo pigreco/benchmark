@@ -11,6 +11,7 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
+    - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - buffer 1 m](#risultati-lz50---buffer-1-m)
 
 <!-- /TOC -->
@@ -73,6 +74,39 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 
 Il Buffer sembra non previsto!!!
 
+## R + RStudio
+
+```
+##install required packages
+#install.packages("rgeos")
+##required packages
+library(rgeos)
+library(sp)
+library(rgdal)
+
+
+start.time <- Sys.time()
+## read shapefile
+regioni<-readOGR(dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper", layer = "dissolve_regioni")
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+
+##Buffer with rgeos AND writeOGR
+start.time <- Sys.time()
+buffer1m<-gBuffer(regioni, byid = TRUE , width = 1)
+plot(buffer1m)
+buffer1m<- as(buffer1m,"SpatialPolygonsDataFrame")
+writeOGR(buffer1m, dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper",layer="buffer1mR", driver = "ESRI Shapefile")
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+```
+
+![](../img/buffer1m/r_01.png)
+
+![](../img/buffer1m/r_02.png)
+
 ## RISULTATI (LZ50) - buffer 1 m
 
 tempo [sec]|programma
@@ -82,7 +116,7 @@ tempo [sec]|programma
 3.3|QGIS 3.3 master con debug
 9|SpatiaLite_GUI 2.10
 9|pgAdmin 3 con spatialIndex
-??|mapshaper
-??|R + RStudio
+NO|mapshaper
+5+15|R + RStudio
 
 [torna su](#buffer-1-m-lz50)
