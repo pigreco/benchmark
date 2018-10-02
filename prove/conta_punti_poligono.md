@@ -54,12 +54,7 @@ estraggo i vertici:
 ![](../img/spatialite_gui_210_info.png)
 
 ```
--- Creo tabella estraendo i vertici
-CREATE TABLE "vertici_com" AS
-SELECT ST_DissolvePoints(geometry) as geometry from Com01012018_WGS84;
-SELECT RecoverGeometryColumn('vertici_com','geometry',32632,'MULTIPOINT','XY');
--- Esplodo i vertici MultiPoint
-SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
+-- Creo tabella 
 ```
 ![](../img/conta_punti_poligono/spatialite_gui_210_01.png)
 
@@ -68,10 +63,7 @@ SELECT ElementaryGeometries( 'vertici_com' ,'geometry' , 'vertici' ,'out_pk' , '
 ![](../img/pgAmin3_info.png)
 
 ```
--- crea tabella vertici_dump
-CREATE TABLE vertici_dump AS
-SELECT k.gid, k.geom  
-FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
+-- crea tabella
 ```
 ![](../img/conta_punti_poligono/pgAmin3_01.png)
 

@@ -73,9 +73,39 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 
 ## mapshaper
 
+```
+time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 com01012018_wgs84.shp -points vertices -explode -o vertici_com01012018_wgs84.shp
+```
+
+NB: restituisce circa 9000 punti in meno!!! (non capisco il perché)
+
+![](../img/estrai_vertici/mapshaper_01.png)
+
 
 ## R + RStudio
 
+Osservazioni: restituisce un numero di punti minori ed esporto in csv!!!
+
+```
+library(rgdal)
+###lettura shapefile
+setwd("C:\\Users\\Salvatore\\Desktop\\mapshaper")
+comuni<-readOGR("com01012018_wgs84.shp")
+#plot(comuni)
+
+##estrazione vertici
+geom_list<-comuni@polygons
+vertices_list<-lapply(1:length(geom_list), function (x) geom_list[[x]]@Polygons[[1]]@coords)
+vertices_data<-do.call(rbind.data.frame, vertices_list)
+vertices_points<-SpatialPoints(vertices_data, comuni@proj4string)#layer dei vertici
+#plot(vertices_points, pch = 19)#processo lungo, togliere # prim del plot per eseguire
+num_vertices<-length(vertices_points)#numero di vertici
+##esporta le coordinate in csv
+write.csv2(vertices_data, file="dataset_single.csv", quote=F, na="", row.names=T)
+##stampa numerovertici estratti
+num_vertices
+```
+![](../img/estrai_vertici/r_01.png)
 
 ## RISULTATI (LZ50) - estrai vertici
 
@@ -86,8 +116,8 @@ tempo [sec]|programma
 95|QGIS 3.3 master con debug
 340|SpatiaLite_GUI 2.10
 21|pgAdmin 3 con spatialIndex
-??|mapshaper
-??|R + RStudio
+380|mapshaper
+67|R + RStudio
 
 ## RISULTATI (xxx) - estrai vertici
 
