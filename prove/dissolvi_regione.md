@@ -85,6 +85,7 @@ time mapshaper encoding=utf-8  com01012018_wgs84.shp -dissolve cod_reg -o outdis
 ##required packages
 library("rgdal")
 library("maptools")
+library("raster")
 
 start.time <- Sys.time()
 ## read shapefile
@@ -93,12 +94,11 @@ end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
 
-##dissolve with maptools AND writeOGR
+##dissolve with raster AND writeOGR
 start.time <- Sys.time()
-dissolve_reg<-unionSpatialPolygons(comuni, comuni$cod_reg)
-#plot(dissolve_reg)
-dissolve_reg<- as(dissolve_reg,"SpatialPolygonsDataFrame")
-writeOGR(dissolve_reg, dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper",layer="dissolve_regR", driver = "ESRI Shapefile")
+dissolveR<- aggregate(comuni, by ='cod_reg')
+#plot(dissolveR)
+writeOGR(dissolveR, dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper",layer="dissolve_regioni", driver = "ESRI Shapefile")
 end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
@@ -118,4 +118,4 @@ tempo [sec]|programma
 249|SpatiaLite_GUI 2.10
 381|pgAdmin 3 (PostGIS 2.2.3)
 9|mapshaper
-19+120|R + RStudio
+16+120|R + RStudio

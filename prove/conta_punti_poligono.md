@@ -13,7 +13,6 @@ dataset: db sqlite con spatialidex
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - conta punti nel poligono](#risultati-lz50---conta-punti-nel-poligono)
-    - [RISULTATI (xxx) - estrai vertici](#risultati-xxx---estrai-vertici)
 
 <!-- /TOC -->
 

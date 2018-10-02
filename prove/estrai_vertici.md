@@ -13,7 +13,6 @@ dataset: db sqlite con spatialidex
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
-    - [RISULTATI (xxx) - estrai vertici](#risultati-xxx---estrai-vertici)
 
 <!-- /TOC -->
 
