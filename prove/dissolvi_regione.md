@@ -11,6 +11,7 @@ dataset: db sqlite con spatialidex
     - [SpatiaLite_GUI 2.10](#spatialitegui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
+    - [R +RStudio](#r-rstudio)
     - [RISULTATI (LZ50) - dissolvi per regione](#risultati-lz50---dissolvi-per-regione)
 
 <!-- /TOC -->
@@ -76,6 +77,38 @@ time mapshaper encoding=utf-8  com01012018_wgs84.shp -dissolve cod_reg -o outdis
 
 ![](../img/dissolvi_regione/mapshaper_01.png)
 
+## R +RStudio
+
+```
+# Required packages
+libs <- c("rgdal", "maptools")
+lapply(libs, require, character.only = TRUE)
+start.time <- Sys.time()
+# Import comuni data
+comuni <- readOGR(dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper", layer = "com01012018_wgs84")
+# Convert SpatialPolygons to data frame
+comuni.df <- as(comuni, "data.frame")
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+start.time <- Sys.time()
+# Dissolve polygons by cod_reg
+comuni.union <- unionSpatialPolygons(comuni, comuni.df[, 3])
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
+start.time <- Sys.time()
+#comuni.df.dis <- as(comuni.union, "data.frame") da errore
+#comuni.shp <- SpatialPolygonsDataFrame(comuni.union, comuni.df.diss) da errore
+# Plotting
+plot(comuni)
+plot(comuni.union, add = TRUE, border = "red", lwd = 2)
+```
+
+![](../img/dissolvi_regione/r_01.png)
+
+![](../img/dissolvi_regione/r_02.png)
+
 ## RISULTATI (LZ50) - dissolvi per regione
 
 tempo [sec]|programma
@@ -86,5 +119,5 @@ tempo [sec]|programma
 249|SpatiaLite_GUI 2.10
 381|pgAdmin 3 con spatialIndex
 9|mapshaper
-??|R + RStudio
+18+120|R + RStudio
 
