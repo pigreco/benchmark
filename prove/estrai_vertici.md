@@ -125,15 +125,3 @@ tempo [sec]|programma
 21|pgAdmin 3 con spatialIndex
 380|mapshaper
 17+54|R + RStudio
-
-## RISULTATI (xxx) - estrai vertici
-
-tempo [sec]|programma
-:---------:|---------
-sss|QGIS 2.18.24
-sss|QGIS 3.2.3
-sss|QGIS 3.3 master con debug
-sss|SpatiaLite_GUI 2.10
-sss|pgAdmin 3 con spatialIndex
-sss|mapshaper
-sss|R + RStudio
