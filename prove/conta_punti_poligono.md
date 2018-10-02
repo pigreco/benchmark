@@ -77,22 +77,25 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 dissolto_r
 
 ## R + RStudio
 
-Osservazione: occorrono circa 6 minuti per caricare i dati in memoria !!!
+Osservazione: occorrono circa 7 minuti per caricare i dati in memoria !!!
 
 ```
 library(rgdal)
 library(GISTools)
 setwd("C:\\Users\\Salvatore\\Desktop\\mapshaper")
-
+start.time <- Sys.time()
 punti<-readOGR("vertici_ok.shp")
 reticolo<-readOGR("dissolto_reg_b1m.shp")
-
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken
 #### calcolo conteggio con misura tempo esecuzione #######
 start.time <- Sys.time()
 conteggio<-poly.counts(punti, reticolo)
 end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
+conteggio
 ```
 
 ![](../img/conta_punti_poligono/r_01.png)
@@ -109,7 +112,7 @@ tempo [sec]|programma
 ??|SpatiaLite_GUI 2.10
 ??|pgAdmin 3 con spatialIndex
 303|mapshaper
-34|R + RStudio
+420 + 35|R + RStudio
 
 ## RISULTATI (xxx) - estrai vertici
 

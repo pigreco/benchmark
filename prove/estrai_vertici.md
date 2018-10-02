@@ -89,10 +89,10 @@ Osservazioni: restituisce un numero di punti minori ed esporto in csv!!!
 ```
 library(rgdal)
 ###lettura shapefile
+start.time <- Sys.time()#inizio cronometro
 setwd("C:\\Users\\Salvatore\\Desktop\\mapshaper")
 comuni<-readOGR("com01012018_wgs84.shp")
 #plot(comuni)
-
 ##estrazione vertici
 geom_list<-comuni@polygons
 vertices_list<-lapply(1:length(geom_list), function (x) geom_list[[x]]@Polygons[[1]]@coords)
@@ -100,9 +100,16 @@ vertices_data<-do.call(rbind.data.frame, vertices_list)
 vertices_points<-SpatialPoints(vertices_data, comuni@proj4string)#layer dei vertici
 #plot(vertices_points, pch = 19)#processo lungo, togliere # prim del plot per eseguire
 num_vertices<-length(vertices_points)#numero di vertici
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken #fine cronometro
 ##esporta le coordinate in csv
+start.time <- Sys.time()#inizio cronometro
 write.csv2(vertices_data, file="dataset_single.csv", quote=F, na="", row.names=T)
-##stampa numerovertici estratti
+end.time <- Sys.time()
+time.taken <- end.time - start.time
+time.taken#fine cronometro
+##stampa numero vertici estratti
 num_vertices
 ```
 ![](../img/estrai_vertici/r_01.png)
@@ -117,7 +124,7 @@ tempo [sec]|programma
 340|SpatiaLite_GUI 2.10
 21|pgAdmin 3 con spatialIndex
 380|mapshaper
-67|R + RStudio
+17+54|R + RStudio
 
 ## RISULTATI (xxx) - estrai vertici
 
