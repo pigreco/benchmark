@@ -80,29 +80,28 @@ time mapshaper encoding=utf-8  com01012018_wgs84.shp -dissolve cod_reg -o outdis
 ## R +RStudio
 
 ```
-# Required packages
-libs <- c("rgdal", "maptools")
-lapply(libs, require, character.only = TRUE)
+##install required packages
+#install.packages("rgdal", "maptools")
+##required packages
+library("rgdal")
+library("maptools")
+
 start.time <- Sys.time()
-# Import comuni data
-comuni <- readOGR(dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper", layer = "com01012018_wgs84")
-# Convert SpatialPolygons to data frame
-comuni.df <- as(comuni, "data.frame")
+## read shapefile
+comuni<-readOGR(dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper", layer = "com01012018_wgs84")
 end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
+
+##dissolve with maptools AND writeOGR
 start.time <- Sys.time()
-# Dissolve polygons by cod_reg
-comuni.union <- unionSpatialPolygons(comuni, comuni.df[, 3])
+dissolve_reg<-unionSpatialPolygons(comuni, comuni$cod_reg)
+#plot(dissolve_reg)
+dissolve_reg<- as(dissolve_reg,"SpatialPolygonsDataFrame")
+writeOGR(dissolve_reg, dsn = "C:\\Users\\Salvatore\\Desktop\\mapshaper",layer="dissolve_regR", driver = "ESRI Shapefile")
 end.time <- Sys.time()
 time.taken <- end.time - start.time
 time.taken
-start.time <- Sys.time()
-#comuni.df.dis <- as(comuni.union, "data.frame") da errore
-#comuni.shp <- SpatialPolygonsDataFrame(comuni.union, comuni.df.diss) da errore
-# Plotting
-plot(comuni)
-plot(comuni.union, add = TRUE, border = "red", lwd = 2)
 ```
 
 ![](../img/dissolvi_regione/r_01.png)
@@ -117,7 +116,6 @@ tempo [sec]|programma
 253|QGIS 3.2.3
 247|QGIS 3.3 master con debug
 249|SpatiaLite_GUI 2.10
-381|pgAdmin 3 con spatialIndex
+381|pgAdmin 3 (PostGIS 2.2.3)
 9|mapshaper
-18+120|R + RStudio
-
+19+120|R + RStudio
