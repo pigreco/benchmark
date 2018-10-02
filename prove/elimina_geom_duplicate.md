@@ -120,3 +120,4 @@ NO|QGIS 3.2.3
 210|mapshaper
 ??|R + RStudio
 
+[torna su](#elimina-geometrie-duplicate-lz50)

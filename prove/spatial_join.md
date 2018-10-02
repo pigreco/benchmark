@@ -89,3 +89,4 @@ tempo [sec]|programma
 335|mapshaper
 ??|R + RStudio
 
+[torna su](#unisci-attributi-per-posizione-lz50)

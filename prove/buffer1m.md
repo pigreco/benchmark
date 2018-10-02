@@ -85,3 +85,4 @@ tempo [sec]|programma
 ??|mapshaper
 ??|R + RStudio
 
+[torna su](#buffer-1-m-lz50)

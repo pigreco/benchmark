@@ -119,3 +119,5 @@ tempo [sec]|programma
 381|pgAdmin 3 (PostGIS 2.2.3)
 9|mapshaper
 16+120|R + RStudio
+
+[torna su](#dissolvi-per-regione-lz50)

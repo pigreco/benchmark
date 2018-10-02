@@ -113,3 +113,4 @@ tempo [sec]|programma
 303|mapshaper
 420 + 35|R + RStudio
 
+[torna su](#conta-punti-nel-poligono-lz50)

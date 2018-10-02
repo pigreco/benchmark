@@ -124,3 +124,5 @@ tempo [sec]|programma
 21|pgAdmin 3 con spatialIndex
 380|mapshaper
 17+54|R + RStudio
+
+[torna su](#estrai-vertici-lz50)
