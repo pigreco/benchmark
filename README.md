@@ -11,6 +11,7 @@ benchmark: due laptop e vari software GIS
     - [prove](#prove)
     - [come eseguire le prove](#come-eseguire-le-prove)
     - [Quadro sinottico prove](#quadro-sinottico-prove)
+    - [Osservazioni finali](#osservazioni-finali)
 
 <!-- /TOC -->
 
@@ -81,3 +82,10 @@ sudo npm install -g mapshaper
 ![](./img/estrai_vertici/qgis33master_07.png)
 
 ## [Quadro sinottico prove](./quadro_sinottico.md)
+
+## Osservazioni finali
+
+Grazie a questi test è stato possibile aprire due ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), entrambe le segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it)).
+
+1. [prima segnalazione](https://issues.qgis.org/issues/19919)
+2. [seconda segnalazione](https://issues.qgis.org/issues/19973)
