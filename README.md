@@ -85,7 +85,8 @@ sudo npm install -g mapshaper
 
 ## Osservazioni finali
 
-Grazie a questi test è stato possibile aprire due ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), entrambe le segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it)).
+Grazie a questi test è stato possibile aprire tre ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), entrambe le segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it) e [Alessandro](https://twitter.com/elpaso66?lang=it)).
 
 1. [prima segnalazione](https://issues.qgis.org/issues/19919)
 2. [seconda segnalazione](https://issues.qgis.org/issues/19973)
+3. [terza segnalazione](https://issues.qgis.org/issues/19971) in lavorazione...
