@@ -103,7 +103,7 @@ PS: non è comprensibile l'output!!!
 
 ## RISULTATI (LZ50) - conta punti nel poligono
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 214|QGIS 2.18.24
 272|QGIS 3.2.3

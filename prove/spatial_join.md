@@ -84,7 +84,7 @@ time node  --max-old-space-size=4192 `which mapshaper` vertici_ok.shp -join diss
 
 ## RISULTATI (LZ50) - unisci attributi per posizione
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 +600|QGIS 2.18.24
 565|QGIS 3.2.3

@@ -109,7 +109,7 @@ time.taken
 
 ## RISULTATI (LZ50) - buffer 1 m
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 7|QGIS 2.18.24
 3.4|QGIS 3.2.3

@@ -115,7 +115,7 @@ num_vertices
 
 ## RISULTATI (LZ50) - estrai vertici
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 123|QGIS 2.18.24
 66|QGIS 3.2.3

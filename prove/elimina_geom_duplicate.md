@@ -115,7 +115,7 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 vertci_all
 
 ## RISULTATI (LZ50) - elimina geometrie duplicate
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 NO|QGIS 2.18.24
 NO|QGIS 3.2.3

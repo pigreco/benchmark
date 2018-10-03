@@ -110,7 +110,7 @@ time.taken
 
 ## RISULTATI (LZ50) - dissolvi per regione
 
-tempo [sec]|programma
+tempo [sec]|software GIS
 :---------:|---------
 588|QGIS 2.18.24
 253|QGIS 3.2.3
