@@ -14,7 +14,7 @@ R + RStudio     | 71             |       ??|       136|    20|  455| ??
 NO: prova troppo lunga o inesitente nel programma; ??: prova da fare;
 
 
-_CONCLUSIONI:_
+## _CONCLUSIONI:_
 
 Se devi estrarre vertici usa **PostGIS**
 
@@ -28,12 +28,13 @@ Se devi contare punti nei poligoni usa **QGIS** 3.4
 
 Se devi fare uno spatiali join usa **QGIS** 3.4
 
-_PODIO:_
+## _PODIO:_
 
 Secondo  | PRIMO    | Terzo
 :-------:|:--------:|:-------:
 PostGIS  | QGIS     | mapshaper
 
+## NOTE sui programmi GIS
 
 **R + RStudio** è molto rapido nelle analisi in quanto carica i dataset in memoria, ma il processo di caricamento è lento!!!
 
