@@ -69,11 +69,13 @@ sudo npm install -g mapshaper
 1. [estrai vertici](./prove/estrai_vertici.md);
 2. [elimina geometrie duplicate](./prove/elimina_geom_duplicate.md) (alludo ai vertici);
 3. [dissolvi per regione](./prove/dissolvi_regione.md) (campo "cod_reg");
-4. [buffer 1 m](./prove/buffer1m.md) (su dissolvi per regione);
+4. [buffer 5 km](./prove/buffer5km.md) (su dissolvi per regione);
 5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando il buffer e vertici senza duplicati);
 6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire campo "cod_reg");
 
-**Descrizione:** il dataset rappresenta un insieme (#7.960) di poligoni (Comuni italiani ISTAT) da cui estrarre i vertici (#4.901.723): questi, in corrispondenza dei limiti adiacente tra i Comuni, saranno duplicati e quindi con la seconda prova si chiede di eliminare queste geometrie (#2.269.768); la terza prova richiede di dissolvere, il dataset di partenza, usando il campo "cod_reg" ottenendo i limiti regionali ISTAT (#20); la quarta prova richiede un semplice buffer di 1 m utilizzando il dataset risultante (#20) dal dissolve (questo passaggio serve per poter effettuare la prova successiva); nella quinta prova si richiede il conteggio dei vertici per ogni regione con buffer 1 m; infine, ultima prova, trasferire il campo "cod_reg" nel vettore vertici.
+**Descrizione:** il dataset rappresenta un insieme (#7.960) di poligoni (Comuni italiani ISTAT **non generalizzati**) da cui estrarre i vertici (#4.901.723): questi, in corrispondenza dei limiti adiacenti tra i Comuni, saranno duplicati e quindi con la seconda prova si chiede di eliminare queste geometrie (#2.269.768); la terza prova richiede di dissolvere, il dataset di partenza, usando il campo "cod_reg" ottenendo i limiti regionali ISTAT **non generalizzati** (#20); la quarta prova richiede un semplice buffer, negativo, di 5 km sul dataset risultante (#20) dal dissolve (questo passaggio serve per poter effettuare la prova successiva); nella quinta prova si richiede il conteggio dei punti per ogni regione con buffer 1 m; infine, ultima prova, trasferire il campo "cod_reg" nel vettore vertici.
+
+![](./img/nro_vertici_reg.png)
 
 ## come eseguire le prove
 
@@ -85,8 +87,8 @@ sudo npm install -g mapshaper
 
 ## Osservazioni finali
 
-Grazie a questi test è stato possibile aprire tre ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), le prime due segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it) e [Alessandro](https://twitter.com/elpaso66?lang=it)).
+Grazie a questi test è stato possibile aprire tre ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), le tre segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it) e [Alessandro](https://twitter.com/elpaso66?lang=it)).
 
 1. [prima segnalazione](https://issues.qgis.org/issues/19919)
 2. [seconda segnalazione](https://issues.qgis.org/issues/19973)
-3. [terza segnalazione](https://issues.qgis.org/issues/19971) in lavorazione...
+3. [terza segnalazione](https://issues.qgis.org/issues/19971)

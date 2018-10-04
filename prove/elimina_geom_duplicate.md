@@ -1,6 +1,6 @@
 # elimina geometrie duplicate (LZ50)
 
-dataset: db sqlite con spatialidex
+dataset: db sqlite con spatialindex
 
 <!-- TOC -->
 

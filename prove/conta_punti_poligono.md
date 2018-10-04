@@ -1,10 +1,10 @@
-# conta punti nel poligono (LZ50)
+# conta punti nel poligono (LZ50) -RIFARE TUTTO!!!
 
-dataset: db sqlite con spatialidex
+dataset: db sqlite con spatialindex
 
 <!-- TOC -->
 
-- [conta punti nel poligono (LZ50)](#conta-punti-nel-poligono-lz50)
+- [conta punti nel poligono (LZ50) -RIFARE TUTTO!!!](#conta-punti-nel-poligono-lz50--rifare-tutto)
     - [QGIS 2.18.24](#qgis-21824)
     - [QGIS 3.2.3](#qgis-323)
     - [QGIS 3.3 master](#qgis-33-master)
@@ -48,14 +48,32 @@ NB: Il debug rallenta le prestazioni!!!
 
 ## SpatiaLite_GUI 2.10
 
-estraggo i vertici:
-
 ![](../img/spatialite_gui_210_info.png)
 
+Query sfruttando lo SpatialIndex (che corrisponde ai BBOX)
+
 ```
--- Creo tabella 
+SELECT b.cod_reg AS cod_reg, count(*) AS nro
+FROM buffer1m b , vertici_ok v 
+WHERE v.pk_uid IN (
+SELECT rowid FROM SpatialIndex WHERE f_table_name = 'vertici_ok'
+AND f_geometry_column = 'geometry' AND search_frame = b.geometry)
+GROUP BY 1
 ```
 ![](../img/conta_punti_poligono/spatialite_gui_210_01.png)
+
+Con questa query dopo oltre 4 ore:
+```
+SELECT b.cod_reg AS rowid, count(*) AS nro
+FROM buffer1m b, vertex v
+WHERE AND v.pk IN (
+SELECT rowid FROM SpatialIndex WHERE f_table_name = 'vertex'
+AND f_geometry_column = 'geometry' AND search_frame =  b.geometry)
+AND St_intersects(b.geometry, v.geometry) = 1
+GROUP BY 1
+```
+
+![](../img/conta_punti_poligono/spatialite_gui_210_02.png)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
@@ -112,7 +130,15 @@ ORDER BY 1;
 ```
 ![](../img/conta_punti_poligono/pgAmin3_03.png)
 
-Risultato ESATTO!!! Ma troppo tempo!
+Risultato ESATTO!!! Ma troppo tempo con il mio Laptop!
+
+Utilizzando il vettore regioni ISTAT generalizzato
+```
+SELECT "COD_REG", count(*)
+FROM vertici_ok a JOIN regioni_g b ON St_Intersects(a.geom, b.geom)
+GROUP BY 1;
+```
+![](../img/conta_punti_poligono/pgAmin3_04.png)
 
 ## mapshaper
 
@@ -157,7 +183,7 @@ tempo [sec]|software GIS
 272|QGIS 3.2.3
 182|QGIS 3.3 master con debug
 ??|SpatiaLite_GUI 2.10
-??|pgAdmin 3 con spatialIndex
+72478|pgAdmin 3 con spatialIndex
 303|mapshaper
 420 + 35|R + RStudio
 

@@ -1,10 +1,10 @@
-# buffer 1 m (LZ50)
+# buffer -5 km (LZ50) RIFARE TUTTO!!!
 
-dataset: db sqlite con spatialidex
+dataset: db sqlite con spatialindex
 
 <!-- TOC -->
 
-- [buffer 1 m (LZ50)](#buffer-1-m-lz50)
+- [buffer -5 km (LZ50) RIFARE TUTTO!!!](#buffer--5-km-lz50-rifare-tutto)
     - [QGIS 2.18.24](#qgis-21824)
     - [QGIS 3.2.3](#qgis-323)
     - [QGIS 3.3 master](#qgis-33-master)

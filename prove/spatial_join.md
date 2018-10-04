@@ -1,10 +1,10 @@
-# unisci attributi per posizione (LZ50)
+# unisci attributi per posizione (LZ50) - RIFARE TUTTO!!!
 
-dataset: db sqlite con spatialidex
+dataset: db sqlite con spatialindex
 
 <!-- TOC -->
 
-- [unisci attributi per posizione (LZ50)](#unisci-attributi-per-posizione-lz50)
+- [unisci attributi per posizione (LZ50) - RIFARE TUTTO!!!](#unisci-attributi-per-posizione-lz50---rifare-tutto)
     - [QGIS 2.18.24](#qgis-21824)
     - [QGIS 3.2.3](#qgis-323)
     - [QGIS 3.3 master](#qgis-33-master)
