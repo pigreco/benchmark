@@ -61,10 +61,58 @@ estraggo i vertici:
 
 ![](../img/pgAmin3_info.png)
 
+**Osservazioni**: PostGIS richiederebbe un tempo incredibilmente lungo per determinare il numero di punti per ogni poligono, la causa è da ricercare nei poligoni delle regioni che hanno migliaia di vertici.
+
 ```
--- crea tabella
+SELECT b.cod_reg AS cod_reg, count(v.geom) AS nro
+FROM buffer1m b left join vertici_ok v on st_contains(b.geom, v.geom) 
+GROUP BY 1
+ORDER BY 1
 ```
+oppure
+```
+SELECT b.cod_reg AS cod_reg,
+SUM(CASE WHEN st_contains(b.geom, v.geom) THEN 1 ELSE 0 END) AS nro
+FROM buffer1m b , vertici_ok v 
+GROUP BY 1
+ORDER BY 1
+```
+
 ![](../img/conta_punti_poligono/pgAmin3_01.png)
+
+dopo 10 minuti... nessun risultato!!!
+
+Usando i BBOX delle regioni:
+
+```
+WITH bbox AS (SELECT cod_reg,ST_Envelope(geom) AS geom FROM buffer1m)
+
+SELECT b.cod_reg AS cod_reg, count(v.geom) AS nro
+FROM bbox b, vertici_ok v
+WHERE st_contains(b.geom, v.geom)
+GROUP BY 1
+ORDER BY 1
+```
+
+![](../img/conta_punti_poligono/pgAmin3_02.png)
+
+L'unica regione che restituisce un valore esatto è la Sardegna!!!
+
+Dopo due ore e questa query:
+
+```
+WITH bbox AS (SELECT cod_reg,ST_Envelope(geom) AS geom FROM buffer1m),
+     codice as (SELECT b.cod_reg,v.geom FROM bbox b JOIN vertici_ok v ON ST_Intersects(b.geom, v.geom))
+
+SELECT b.cod_reg AS cod_reg, count(v.geom) AS nro
+FROM buffer1m b JOIN codice v ON ST_Intersects(b.geom, v.geom)
+WHERE b.cod_reg = v.cod_reg
+GROUP BY 1
+ORDER BY 1;
+```
+![](../img/conta_punti_poligono/pgAmin3_03.png)
+
+Risultato ESATTO!!! Ma troppo tempo!
 
 ## mapshaper
 
