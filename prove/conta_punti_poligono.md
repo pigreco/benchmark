@@ -24,8 +24,6 @@ dataset: db sqlite con spatialindex
 
 ![](../img/conta_punti_poligono/qgis21824_02.png)
 
-![](../img/conta_punti_poligono/conteggio21824.png)
-
 ## QGIS 3.2.3
 
 ![](../img/qgis323_info.png)
@@ -43,8 +41,6 @@ NB: Il debug rallenta le prestazioni!!!
 ![](../img/conta_punti_poligono/qgis33master_01.png)
 
 ![](../img/conta_punti_poligono/qgis33master_02.png)
-
-![](../img/conta_punti_poligono/conteggio33master.png)
 
 ## SpatiaLite_GUI 2.10
 
@@ -179,8 +175,8 @@ PS: non è comprensibile l'output!!!
 
 tempo [sec]|software GIS
 :---------:|---------
-214|QGIS 2.18.24
-272|QGIS 3.2.3
+434|QGIS 2.18.24
+488|QGIS 3.2.3
 182|QGIS 3.3 master con debug
 ??|SpatiaLite_GUI 2.10
 72478|pgAdmin 3 con spatialIndex
