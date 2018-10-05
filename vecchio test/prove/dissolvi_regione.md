@@ -52,7 +52,8 @@ estraggo i vertici:
 -- crea geotabella dissolvendo per cod_reg
 CREATE TABLE dissolve_reg AS
 SELECT cod_reg, CastToMultiPolygon(ST_Union(geometry)) AS geometry 
-FROM com01012018_wgs84;
+FROM com01012018_wgs84
+GROUP BY 1;
 SELECT RecoverGeometryColumn('dissolve_reg','geometry',32632,'MULTIPOLYGON','XY');
 ```
 ![](../img/dissolvi_regione/spatialite_gui_210_01.png)
@@ -65,7 +66,8 @@ SELECT RecoverGeometryColumn('dissolve_reg','geometry',32632,'MULTIPOLYGON','XY'
 -- crea tabella dissolvi per regione
 CREATE TABLE dissolto_reg AS
 SELECT cod_reg, ST_Multi(ST_Union(geom)) AS geom  
-FROM public.com01012018_wgs84;
+FROM public.com01012018_wgs84
+GROUP BY 1;
 ```
 ![](../img/dissolvi_regione/pgAmin3_01.png)
 
