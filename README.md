@@ -1,5 +1,5 @@
 # benchmark
-benchmark: due laptop e vari software GIS
+con due laptop e vari software GIS
 
 <!-- TOC -->
 
@@ -47,6 +47,8 @@ comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
 
 ![](./img/readme/numeri_330.png)
 
+--> [torna su](#benchmark)
+
 ## software GIS
 
 * [QGIS](https://qgis.org/it/site/) 2.18.24, 3.2.3, 3.3 master (05/10/2018)
@@ -71,26 +73,31 @@ sudo npm install -g mapshaper
 5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando i bbox e griglia punti regolari);
 6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire campo "cod_reg");
 
-**Descrizione:** il dataset rappresenta un insieme di (#7.960) poligoni (Comuni italiani ISTAT **generalizzati**) da cui estrarre i vertici (#853.700): questi, in corrispondenza dei limiti adiacenti tra i Comuni, saranno duplicati e quindi con la seconda prova si eliminano queste geometrie (#432.355); la terza prova richiede di dissolvere, il dataset di partenza, usando il campo "cod_reg" ottenendo i limiti regionali ISTAT **generalizzati** (#20); la quarta prova richiede un semplice buffer, negativo, di 2 km sul dataset risultante dal dissolve; la quinta prova conteggia il numero di punti per ogni regione con buffer -2 km; infine, ultima prova, trasferire il campo "cod_reg" nel vettore vertici senza duplicati. (Il dataset e le prove sono state studiate per essere facilemnte realizzate nel mio laptop LZ50)
+**Descrizione:** il dataset rappresenta un insieme di (#7.960) poligoni (Comuni italiani ISTAT **generalizzati**) da cui estrarre i vertici (#853.700): questi, in corrispondenza dei limiti adiacenti tra i Comuni, saranno duplicati e quindi con la _seconda prova_ si eliminano queste geometrie (#432.355); la _terza prova_ richiede di dissolvere, il dataset di partenza, usando il campo "cod_reg" ottenendo i limiti regionali ISTAT **generalizzati** (#20); la _quarta prova_ richiede un semplice buffer, negativo, di 2 km sul dataset risultante dal dissolve; la _quinta prova_ conteggia il numero di punti per ogni regione con buffer -2 km; infine, _ultima prova_, trasferire il campo "cod_reg" nel vettore vertici senza duplicati. (Il dataset e le prove sono state studiate per essere facilmente realizzate nel mio laptop LZ50)
+
+--> [torna su](#benchmark)
 
 ## come eseguire le prove
 
-È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va _ripetuta due volte_ e il tempo impiegato espresso in secondi. L'output va sempre salvato in un file o tabella.
+È importante (per PC/Laptop datati, come il mio) chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia disponibile per i test; inoltre, la prova va _ripetuta due volte_ e il tempo impiegato espresso in secondi. L'output va sempre salvato in un file (shp, csv) o tabella (in caso di DBMS).
 
-Per i DBMS SpatiaLite e PostGIS - creazione indici spaziali
+Per i DBMS **SpatiaLite** e **PostGIS** - creazione indici spaziali
 
 ![](./img/readme/pg_223_idx.png)
 
 ![](./img/readme/sl_210_idx.png)
 
+--> [torna su](#benchmark)
 
 ## [Quadro sinottico prove](./quadro_sinottico.md)
 
 ## Osservazioni finali
 
-Grazie a questi test è stato possibile aprire quattro ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), le quattro segnalazioni sono state risolte e la prossima QGIS 3.4 sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it) e [Alessandro](https://twitter.com/elpaso66?lang=it)).
+Grazie a questi test è stato possibile `'aprire'` quattro ticket (segnalazioni) sul [bugtracker di QGIS](https://issues.qgis.org/projects/qgis/issues/), le quattro segnalazioni sono state risolte e la prossima **QGIS 3.4** sarà più performante (Grazie [Nyall](https://twitter.com/nyalldawson?lang=it) e [Alessandro](https://twitter.com/elpaso66?lang=it)).
 
 1. [prima segnalazione](https://issues.qgis.org/issues/19919)
 2. [seconda segnalazione](https://issues.qgis.org/issues/19973)
 3. [terza segnalazione](https://issues.qgis.org/issues/19971)
 4. [quarta segnalazione](https://issues.qgis.org/issues/20015)
+
+--> [torna su](#benchmark)
