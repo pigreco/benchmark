@@ -30,6 +30,8 @@ Salvando in un file shp:
 
 ![](../img/estrai_v/qgis21824_03.png)
 
+-->[torna su](#estrai-vertici-lz50)
+
 ## QGIS 3.2.3
 
 ![](../img/qgis323_info.png)
@@ -43,6 +45,8 @@ Creando un layer temporaneo in memoria:
 Salvando in un file shp:
 
 ![](../img/estrai_v/qgis323_02.png)
+
+-->[torna su](#estrai-vertici-lz50)
 
 ## QGIS 3.3 master
 
@@ -60,6 +64,8 @@ Salvando in un file shp:
 
 ![](../img/estrai_v/qgis330_02.png)
 
+-->[torna su](#estrai-vertici-lz50)
+
 ## SpatiaLite_GUI 2.10
 
 estraggo i vertici:
@@ -75,6 +81,8 @@ SELECT RecoverGeometryColumn('vertici_g','geom',32632,'MULTIPOINT','XY');
 SELECT ElementaryGeometries( 'vertici_g' ,'geom' , 'vertici_g_dump' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
 ```
 ![](../img/estrai_v/sl_210_01.png)
+
+-->[torna su](#estrai-vertici-lz50)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
@@ -96,6 +104,8 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 
 ![](../img/estrai_v/pg_223_02.png)
 
+-->[torna su](#estrai-vertici-lz50)
+
 ## mapshaper
 
 ![](../img/mapshaper_info.png)
@@ -108,6 +118,7 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 Com0101201
 
 ![](../img/estrai_v/mapshaper_01.png)
 
+-->[torna su](#estrai-vertici-lz50)
 
 ## R + RStudio
 
