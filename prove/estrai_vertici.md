@@ -159,9 +159,9 @@ file/table [sec]|memoria [sec]|software GIS
 202        |   51      |QGIS 2.18.24
 218        |   27      |QGIS 3.2.3
 245        |   40      |QGIS 3.3 master con debug
-283        |    -      |SpatiaLite_GUI 2.10
+283        |   `-`     |SpatiaLite_GUI 2.10
 9          |   40      |pgAdmin 3 con spatialIndex
-63         |    -      |mapshaper
+63         |   `-`     |mapshaper
 43         |   22      |R + RStudio
 
 `-` prova non possibile! 
