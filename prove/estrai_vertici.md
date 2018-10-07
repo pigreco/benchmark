@@ -1,6 +1,6 @@
 # estrai vertici (LZ50)
 
-dataset: db sqlite con spatialindex
+**dataset:** db sqlite con spatialindex tabella _Com01012018_g_WGS84_
 
 <!-- TOC -->
 
@@ -67,8 +67,6 @@ Salvando in un file shp:
 -->[torna su](#estrai-vertici-lz50)
 
 ## SpatiaLite GUI 2.10
-
-estraggo i vertici:
 
 ![](../img/spatialite_gui_210_info.png)
 

@@ -45,6 +45,8 @@ comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
 -------------|-----------|----------------|--------------
 7960 MultiPolygon|853.700|432.355         |421.345
 
+![](./img/readme/numeri_330.png)
+
 ## software GIS
 
 * [QGIS](https://qgis.org/it/site/) 2.18.24, 3.2.3, 3.3 master (05/10/2018)
@@ -73,9 +75,14 @@ sudo npm install -g mapshaper
 
 ## come eseguire le prove
 
-È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va _ripetuta due volte_ e il valore espresso in secondi. L'output va sempre salvato in un file.
+È importante chiudere tutti gli applicativi non interessati alla prova in modo che ogni risorsa sia dedicata ai test, inoltre, la prova va _ripetuta due volte_ e il tempo impiegato espresso in secondi. L'output va sempre salvato in un file o tabella.
 
-![](./img/estrai_vertici/qgis33master_07.png)
+Per i DBMS SpatiaLite e PostGIS - creazione indici spaziali
+
+![](./img/readme/pg_223_idx.png)
+
+![](./img/readme/sl_210_idx.png)
+
 
 ## [Quadro sinottico prove](./quadro_sinottico.md)
 
