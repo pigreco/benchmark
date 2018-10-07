@@ -8,7 +8,7 @@ dataset: db sqlite con spatialindex
     - [QGIS 2.18.24](#qgis-21824)
     - [QGIS 3.2.3](#qgis-323)
     - [QGIS 3.3 master](#qgis-33-master)
-    - [SpatiaLite_GUI 2.10](#spatialitegui-210)
+    - [SpatiaLite GUI 2.10](#spatialite-gui-210)
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
@@ -66,7 +66,7 @@ Salvando in un file shp:
 
 -->[torna su](#estrai-vertici-lz50)
 
-## SpatiaLite_GUI 2.10
+## SpatiaLite GUI 2.10
 
 estraggo i vertici:
 
