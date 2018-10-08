@@ -64,6 +64,8 @@ sudo apt-get install npm
 sudo npm install -g mapshaper
 ```
 
+![](./img/readme/sw.png)
+
 ## prove
 
 1. [estrai vertici](./prove/estrai_vertici.md);
