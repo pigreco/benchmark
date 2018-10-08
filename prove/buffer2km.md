@@ -33,7 +33,7 @@ Salvando in un file shp:
 
 ![](../img/buffer2km/qgis21824_04.png)
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## QGIS 3.2.3
 
@@ -51,7 +51,7 @@ Salvando in un file shp:
 
 ![](../img/buffer2km/qgis323_03.png)
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## QGIS 3.3 master
 
@@ -69,7 +69,7 @@ Salvando in un file shp:
 
 ![](../img/buffer2km/qgis330_03.png)
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## SpatiaLite GUI 2.10
 
@@ -99,7 +99,7 @@ FROM dissolve_reg;
 
 ![](../img/buffer2km/sl_210_02.png)
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
@@ -125,7 +125,7 @@ FROM dissolto_g_reg;
 
 ![](../img/buffer2km/pg_223_02.png)
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## mapshaper
 
@@ -135,7 +135,7 @@ FROM dissolto_g_reg;
 Il Buffer sembra non previsto!!!
 ```
 
--->[torna su](#dissolvi-per-regione-lz50)
+-->[torna su](#buffer--2-km-lz50)
 
 ## R + RStudio
 
@@ -182,7 +182,7 @@ file/table [sec]|memoria [sec]|software GIS
 
 `-` prova non possibile! 
 
-[torna su](#dissolvi-per-regione-lz50)
+[torna su](#buffer--2-km-lz50)
 
 ## Osservazioni finali:
 
