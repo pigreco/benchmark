@@ -69,7 +69,7 @@ sudo npm install -g mapshaper
 1. [estrai vertici](./prove/estrai_vertici.md);
 2. [elimina geometrie duplicate](./prove/elimina_geom_duplicate.md) (alludo ai vertici);
 3. [dissolvi per regione](./prove/dissolvi_regione.md) (campo "cod_reg");
-4. [buffer -2 km](./prove/buffer5km.md) (su dissolvi per regione);
+4. [buffer -2 km](./prove/buffer2km.md) (su dissolvi per regione);
 5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando i bbox e griglia punti regolari);
 6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire campo "cod_reg");
 
