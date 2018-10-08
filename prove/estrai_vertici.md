@@ -13,6 +13,7 @@
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
+    - [Osservazioni finali:](#osservazioni-finali)
 
 <!-- /TOC -->
 
@@ -167,3 +168,7 @@ file/table [sec]|memoria [sec]|software GIS
 `-` prova non possibile! 
 
 [torna su](#estrai-vertici-lz50)
+
+## Osservazioni finali:
+
+In QGIS l'uso dei _file temporanei_ (in memoria) velocizza di parecchio la generazione dell'output di alcuni processing; al contrario in PostGIS, la creazione della tabella è molto più rapida; in RStudio la creazione di un file di output implica sempre più tempo.

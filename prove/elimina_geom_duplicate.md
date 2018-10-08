@@ -12,7 +12,7 @@
   - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
   - [mapshaper](#mapshaper)
   - [R + RStudio](#r--rstudio)
-  - [RISULTATI (LZ50) - estrai vertici](#risultati-lz50---estrai-vertici)
+  - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
 
 <!-- /TOC -->
 
@@ -139,7 +139,7 @@ da fare
 ```
 ![](../img/elimina_d/rstudio_01.png)
 
-## RISULTATI (LZ50) - estrai vertici
+## RISULTATI (LZ50) - elimina geometrie duplicate
 
 file/table [sec]|memoria [sec]|software GIS
 :---------:|:---------:|---------
@@ -148,7 +148,7 @@ file/table [sec]|memoria [sec]|software GIS
 462        |  387      |QGIS 3.3 master con debug
 100        |   19      |SpatiaLite_GUI 2.10
 13         |   26      |pgAdmin 3 con spatialIndex
-136        |    -      |mapshaper
+136        |   `-`     |mapshaper
 ??         |   ??      |R + RStudio
 
 `-` prova non possibile o bug!  `??` da fare 
