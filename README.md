@@ -72,7 +72,7 @@ sudo npm install -g mapshaper
 2. [elimina geometrie duplicate](./prove/elimina_geom_duplicate.md) (alludo ai vertici);
 3. [dissolvi per regione](./prove/dissolvi_regione.md) (campo "cod_reg");
 4. [buffer -2 km](./prove/buffer2km.md) (su dissolvi per regione);
-5. [conta punti nel poligono](./prove/conta_punti_poligono.md) (usando i bbox e griglia punti regolari);
+5. [conta punti nel poligono](./prove/conta_punti_poligono.md);
 6. [spatial join](./prove/spatial_join.md) (tra vertici e regione - trasferire campo "cod_reg");
 
 **Descrizione:** il dataset rappresenta un insieme di (#7.960) poligoni (Comuni italiani ISTAT **generalizzati**) da cui estrarre i vertici (#853.700): questi, in corrispondenza dei limiti adiacenti tra i Comuni, saranno duplicati e quindi con la _seconda prova_ si eliminano queste geometrie (#432.355); la _terza prova_ richiede di dissolvere, il dataset di partenza, usando il campo "cod_reg" ottenendo i limiti regionali ISTAT **generalizzati** (#20); la _quarta prova_ richiede un semplice buffer, negativo, di 2 km sul dataset risultante dal dissolve; la _quinta prova_ conteggia il numero di punti per ogni regione con buffer -2 km; infine, _ultima prova_, trasferire il campo "cod_reg" nel vettore vertici senza duplicati. (Il dataset e le prove sono state studiate per essere facilmente realizzate nel mio laptop LZ50)
