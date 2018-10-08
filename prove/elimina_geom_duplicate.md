@@ -13,6 +13,7 @@
   - [mapshaper](#mapshaper)
   - [R + RStudio](#r--rstudio)
   - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
+  - [Osservazioni finali:](#osservazioni-finali)
 
 <!-- /TOC -->
 
@@ -154,3 +155,7 @@ file/table [sec]|memoria [sec]|software GIS
 `-` prova non possibile o bug!  `??` da fare 
 
 [torna su](#elimina-geometrie-duplicate-lz50)
+
+## Osservazioni finali:
+
+In QGIS l'uso dei _file temporanei_ (in memoria) velocizza di parecchio la generazione dell'output di alcuni processing, in questo caso il bug non permette la realizzazione dei test; al contrario in PostGIS, la creazione della tabella è molto più rapida; in Spatialite restituisce velocemente i primi 500 risultati; in RStudio la creazione di un file di output implica sempre più tempo.

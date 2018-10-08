@@ -186,7 +186,7 @@ file/table [sec]|memoria [sec]|software GIS
 98         |   98      |SpatiaLite_GUI 2.10
 163        |  155      |pgAdmin 3 con spatialIndex
 3.2        |   `-`     |mapshaper
-61         |   62      |R + RStudio
+62         |   61      |R + RStudio
 
 `-` prova non possibile! 
 
@@ -194,4 +194,4 @@ file/table [sec]|memoria [sec]|software GIS
 
 ## Osservazioni finali:
 
-In QGIS l'uso dei _file temporanei_ (in memoria) velocizza di parecchio la generazione dell'output di alcuni processing; al contrario in PostGIS, la creazione della tabella è molto più rapida; in RStudio la creazione di un file di output implica sempre più tempo.
+In QGIS l'uso dei _file temporanei_ (in memoria) velocizza di parecchio la generazione dell'output di alcuni processing, in questo caso sembra non cambiare nulla anche per PostGIS,Spatialite e RStudio.
