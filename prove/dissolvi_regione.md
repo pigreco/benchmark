@@ -130,6 +130,8 @@ FROM public.com01012018_g_WGS84
 GROUP BY 1;
 ```
 
+![](../img/dissolve_reg/pg_223_02.png)
+
 -->[torna su](#dissolvi-per-regione-lz50)
 
 ## mapshaper
@@ -147,8 +149,6 @@ time mapshaper encoding=utf-8  Com01012018_g_WGS84.shp -dissolve COD_REG -o diss
 ## R + RStudio
 
 ![](../img/rstudio_info.png)
-
-**NB:** restituisce 23.657 punti in meno rispetto tutti gli altri software!!!
 
 ```
 library("rgdal")
