@@ -13,7 +13,7 @@
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
     - [RISULTATI (LZ50) - spatial join - attibuti per posizione](#risultati-lz50---spatial-join---attibuti-per-posizione)
-    - [Osservazioni finali:](#osservazioni-finali)
+    - [Osservazioni finali](#osservazioni-finali)
 
 <!-- /TOC -->
 
@@ -169,6 +169,6 @@ file/table [sec]|memoria [sec]|software GIS
 
 [torna su](#spatial-join---attibuti-per-posizione-lz50)
 
-## Osservazioni finali:
+## Osservazioni finali
 
 In QGIS l'uso dei _file temporanei_ (in memoria) velocizza di parecchio la generazione dell'output di alcuni processing.

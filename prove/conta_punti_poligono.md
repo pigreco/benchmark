@@ -12,7 +12,8 @@
     - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
     - [mapshaper](#mapshaper)
     - [R + RStudio](#r--rstudio)
-    - [RISULTATI (LZ50) - buffer -2 km](#risultati-lz50---buffer--2-km)
+            - [calcolo conteggio](#calcolo-conteggio)
+    - [RISULTATI (LZ50) - conta punti nel poligono](#risultati-lz50---conta-punti-nel-poligono)
     - [Osservazioni finali:](#osservazioni-finali)
 
 <!-- /TOC -->
@@ -176,7 +177,7 @@ conteggio
 ```
 ![](../img/conta_p/r_01.png)
 
-## RISULTATI (LZ50) - buffer -2 km
+## RISULTATI (LZ50) - conta punti nel poligono
 
 file/table [sec]|memoria [sec]|software GIS
 :---------:|:---------:|---------
