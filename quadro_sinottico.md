@@ -1,4 +1,4 @@
-# Quadro sinottico
+# Quadro sinottico LZ50
 
 Software GIS / prova    | QGIS 2.18.24  | QGIS 3.2.3 | QGIS 3.3 master|SpatiaLite 2.10|PostGIS 2.2.3 |mapshaper|R + RStudio
 -----------------------:|:-------------:|:----------:|:--------------:|:-------------:|:------------:|:-------:|:---------:
