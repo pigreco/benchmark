@@ -47,6 +47,10 @@ Comuni ISTAT     |nro vertici|senza duplicati | nro duplicati
 
 ![](./img/readme/numeri_330.png)
 
+![](./img/readme/nro_vertici.png)
+
+![](./img/readme/nro_vertici_pg.png)
+
 --> [torna su](#benchmark)
 
 ## software GIS
