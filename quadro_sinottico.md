@@ -9,8 +9,9 @@ buffer                   |23/23         |22/22       |22/22           |15/11    
 conta punti nei poligoni |65/60         |75/75       |75/75           |3372/+3600     |254/394       |64/`-`   |407/407
 spatial join             |+1432/1432    |57/34       |60/47           |513/1          |530/26        |29/`-`   |??/??
 
+tempi in secondi: file-tabella/memoria  
 
-`-`: prova non prevista nel programma; ??: prova da fare;
+`-`: prova non prevista nel programma o non fattibile; ??: prova da fare;
 
 
 ## NOTE sui programmi GIS
