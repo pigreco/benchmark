@@ -50,7 +50,7 @@ Salvando in un file shp:
 
 ![](../img/spatial_j/qgis323_04.png)
 
--->[torna su](#conta-i-punti-nel-poligono-lz50)
+-->[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## QGIS 3.3 master
 
@@ -70,7 +70,7 @@ Salvando in un file shp:
 
 ![](../img/spatial_j/qgis330_04.png)
 
--->[torna su](#conta-i-punti-nel-poligono-lz50)
+-->[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## SpatiaLite GUI 2.10
 
@@ -103,7 +103,7 @@ AND search_frame = b.geom);
 
 ![](../img/spatial_j/sl_210_02.png)
 
--->[torna su](#conta-i-punti-nel-poligono-lz50)
+-->[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
 
@@ -129,7 +129,7 @@ FROM buffer2km_g b join vertici_g_ok v on st_intersects(b.geom,v.geom);
 
 ![](../img/spatial_j/pg_223_02.png)
 
--->[torna su](#conta-i-punti-nel-poligono-lz50)
+-->[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## mapshaper
 
@@ -141,9 +141,8 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 vertici_g_
 
 ![](../img/spatial_j/mapshaper_01.png)
 
-**NB:** i conteggi sono diversi rispetto agli altri software!!!
 
--->[torna su](#conta-i-punti-nel-poligono-lz50)
+-->[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## R + RStudio
 
@@ -168,7 +167,7 @@ file/table [sec]|memoria [sec]|software GIS
 
 `-` prova non possibile! ??? da fare
 
-[torna su](#conta-i-punti-nel-poligono-lz50)
+[torna su](#spatial-join---attibuti-per-posizione-lz50)
 
 ## Osservazioni finali:
 
