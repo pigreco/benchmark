@@ -12,6 +12,7 @@ con due laptop e vari software GIS
     - [come eseguire le prove](#come-eseguire-le-prove)
     - [Quadro sinottico prove](#quadro-sinottico-prove)
     - [Osservazioni finali](#osservazioni-finali)
+    - [Ringraziamenti](#ringraziamenti)
 
 <!-- /TOC -->
 
@@ -23,7 +24,6 @@ sistema:
 * _RAM_: 8,00 GB
 * _Tipo sistema_: Sistema operativo a 64 bit, processore basato du x64
 * _storage_: HDD 
-
 
 ## xxxxxxxxxxxxxxxxx - SO windows 10 64 b (yyy)
 
@@ -41,9 +41,9 @@ Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT -
 * [qui](./dati/com01012018_g_WGS84.7z) shapefile
 * [qui](./dati/db_benchmark.7z) db sqlite
 
-comuni ISTAT |nro vertici|nro no duplicati| nro duplicati
--------------|-----------|----------------|--------------
-7960 MultiPolygon|853.700|432.355         |421.345
+Comuni ISTAT     |nro vertici|senza duplicati | nro duplicati
+-----------------|-----------|----------------|--------------
+7960 MultiPolygon|853.700    |432.355         |421.345
 
 ![](./img/readme/numeri_330.png)
 
@@ -103,3 +103,8 @@ Grazie a questi test è stato possibile `'aprire'` quattro ticket (segnalazioni)
 4. [quarta segnalazione](https://issues.qgis.org/issues/20015)
 
 --> [torna su](#benchmark)
+
+## Ringraziamenti
+
+- [Ludovico Frate](https://twitter.com/FrateLudovico?lang=it) per l'idea e gli script per R + RStudio;
+- [Andrea Borruso](https://twitter.com/aborruso?lang=it) per avermi fatto conoscere _mapshaper_ e consigliato i relativi script
