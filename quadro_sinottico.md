@@ -16,9 +16,9 @@ tempi in secondi: file-tabella/memoria
 
 ## NOTE sui software GIS utilizzati
 
-**R + RStudio** è molto rapido nelle analisi in quanto carica i dataset in memoria, ma il processo di caricamento è lento!!!
+**R + RStudio** è molto rapido nelle analisi in quanto carica i dataset in memoria, ma il processo di caricamento è lento, inoltre, non è di facile utilizzo.
 
-**mapshaper** utility da riga di comando, fa benissimo alcune cose - vedi dissolve - ma non è completo!!!
+**mapshaper** utility da riga di comando, fa benissimo alcune cose - vedi dissolve - ma non è completo (manca il buffer), comunque tre prove su 6 sono a suo favore; 
 
 **QGIS 2.18 LTR**  ha fatto la storia di QGIS ma andrà in pensione a ottobre 2018 dopo due anni di gloria!!!
 
@@ -26,8 +26,8 @@ tempi in secondi: file-tabella/memoria
 
 **QGIS 3.3 master** è attualmente la versione di sviluppo ma a fine ottobre 2018 sarà la 3.4, ovvero la prossima LTR fino al 2020!!!
 
-**PostGIS** è il migliore in assoluto ma in certe prove - come il dissolve - è lento!!!
+**PostGIS** è veloce per alcune prove ma è e resterà sempre un SW elefantiaco!
 
-**SpatiaLite** è il migliore se si considera la faciltà di uso.
+**SpatiaLite** è veloce per alcune prove, ma il suo punto di forza è la praticità d'uso.
 
 
