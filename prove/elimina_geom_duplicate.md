@@ -5,15 +5,15 @@
 <!-- TOC -->
 
 - [elimina geometrie duplicate (LZ50)](#elimina-geometrie-duplicate-lz50)
-  - [QGIS 2.18.24](#qgis-21824)
-  - [QGIS 3.2.3](#qgis-323)
-  - [QGIS 3.3 master](#qgis-33-master)
-  - [SpatiaLite GUI 2.10](#spatialite-gui-210)
-  - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
-  - [mapshaper](#mapshaper)
-  - [R + RStudio](#r--rstudio)
-  - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
-  - [Osservazioni finali:](#osservazioni-finali)
+    - [QGIS 2.18.24](#qgis-21824)
+    - [QGIS 3.2.3](#qgis-323)
+    - [QGIS 3.3 master](#qgis-33-master)
+    - [SpatiaLite GUI 2.10](#spatialite-gui-210)
+    - [PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3](#postgresql-93--postgis-223--pgadmin-3)
+    - [mapshaper](#mapshaper)
+    - [R + RStudio](#r--rstudio)
+    - [RISULTATI (LZ50) - elimina geometrie duplicate](#risultati-lz50---elimina-geometrie-duplicate)
+    - [Osservazioni finali:](#osservazioni-finali)
 
 <!-- /TOC -->
 
@@ -59,6 +59,8 @@ Salvando in un file shp:
 
 ![](../img/elimina_d/qgis330_04.png)
 
+Numero vertici puliti: 432.355
+
 -->[torna su](#elimina-geometrie-duplicate-lz50)
 
 ## SpatiaLite GUI 2.10
@@ -89,6 +91,8 @@ WHERE out_pk IN (SELECT min(out_pk) FROM vertici_g_dump GROUP BY geom);
 
 ![](../img/elimina_d/sl_210_02.png)
 
+Numero vertici puliti: 432.355
+
 -->[torna su](#elimina-geometrie-duplicate-lz50)
 
 ## PostgreSQL 9.3 / PostGIS 2.2.3 / pgAdmin 3
@@ -115,6 +119,8 @@ FROM vertici_g_dump;
 
 ![](../img/elimina_d/pg_223_02.png)
 
+Numero vertici puliti: 432.355
+
 -->[torna su](#elimina-geometrie-duplicate-lz50)
 
 ## mapshaper
@@ -128,6 +134,9 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 vertici_g.
 
 ![](../img/elimina_d/mapshaper_01.png)
 
+![](../img/elimina_d/mapshaper_02.png)
+
+Numero vertici puliti: 432.355
 
 -->[torna su](#elimina-geometrie-duplicate-lz50)
 
@@ -142,15 +151,15 @@ da fare
 
 ## RISULTATI (LZ50) - elimina geometrie duplicate
 
-file/table [sec]|memoria [sec]|software GIS
-:---------:|:---------:|---------
-  `-`      |    `-`    |QGIS 2.18.24
-  `-`      |    `-`    |QGIS 3.2.3
-462        |  387      |QGIS 3.3 master con debug
-100        |   19      |SpatiaLite_GUI 2.10
-13         |   26      |pgAdmin 3 con spatialIndex
-136        |   `-`     |mapshaper
-??         |   ??      |R + RStudio
+file/table [sec]|memoria [sec]|software GIS       | puliti
+:---------:|:---------:|--------------------------|:---------
+  `-`      |    `-`    |QGIS 2.18.24              | `-`
+  `-`      |    `-`    |QGIS 3.2.3                | `-`
+462        |  387      |QGIS 3.3 master con debug | 432.355
+100        |   19      |SpatiaLite_GUI 2.10       | 432.355
+13         |   26      |pgAdmin 3 con spatialIndex| 432.355
+136        |   `-`     |mapshaper                 | 432.355
+??         |   ??      |R + RStudio               | ??
 
 `-` prova non possibile o bug!  `??` da fare 
 

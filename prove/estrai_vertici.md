@@ -31,6 +31,8 @@ Salvando in un file shp:
 
 ![](../img/estrai_v/qgis21824_03.png)
 
+Numero vertici estratti: 853.700
+
 -->[torna su](#estrai-vertici-lz50)
 
 ## QGIS 3.2.3
@@ -46,6 +48,8 @@ Creando un layer temporaneo in memoria:
 Salvando in un file shp:
 
 ![](../img/estrai_v/qgis323_02.png)
+
+Numero vertici estratti: 853.700
 
 -->[torna su](#estrai-vertici-lz50)
 
@@ -65,6 +69,8 @@ Salvando in un file shp:
 
 ![](../img/estrai_v/qgis330_02.png)
 
+Numero vertici estratti: 853.700
+
 -->[torna su](#estrai-vertici-lz50)
 
 ## SpatiaLite GUI 2.10
@@ -80,6 +86,8 @@ SELECT RecoverGeometryColumn('vertici_g','geom',32632,'MULTIPOINT','XY');
 SELECT ElementaryGeometries( 'vertici_g' ,'geom' , 'vertici_g_dump' ,'out_pk' , 'out_multi_id', 1 ) as num, 'vertici' as label;
 ```
 ![](../img/estrai_v/sl_210_01.png)
+
+Numero vertici estratti: 853.700
 
 -->[torna su](#estrai-vertici-lz50)
 
@@ -103,6 +111,8 @@ FROM ( SELECT (ST_DumpPoints(geom)).*, gid FROM com01012018_wgs84 )k;
 
 ![](../img/estrai_v/pg_223_02.png)
 
+Numero vertici estratti: 853.700
+
 -->[torna su](#estrai-vertici-lz50)
 
 ## mapshaper
@@ -114,6 +124,8 @@ time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 Com0101201
 ```
 
 **NB:** restituisce 9004 punti in meno rispetto a tutti gli altri software. (non capisco il perché!!!)
+
+Numero vertici estratti: 844.696
 
 ![](../img/estrai_v/mapshaper_01.png)
 
@@ -153,17 +165,19 @@ num_vertices
 ```
 ![](../img/estrai_v/rstudio_01.png)
 
+Numero vertici estratti: 830.043
+
 ## RISULTATI (LZ50) - estrai vertici
 
-file/table [sec]|memoria [sec]|software GIS
-:---------:|:---------:|---------
-202        |   51      |QGIS 2.18.24
-218        |   27      |QGIS 3.2.3
-245        |   40      |QGIS 3.3 master con debug
-283        |   `-`     |SpatiaLite_GUI 2.10
-9          |   40      |pgAdmin 3 con spatialIndex
-63         |   `-`     |mapshaper
-43         |   22      |R + RStudio
+file/table [sec]|memoria [sec]|software GIS       | nro vertici
+:---------:|:---------:|--------------------------|:-----------:
+202        |   51      |QGIS 2.18.24              | 853.700
+218        |   27      |QGIS 3.2.3                | 853.700
+245        |   40      |QGIS 3.3 master con debug | 853.700
+283        |   `-`     |SpatiaLite_GUI 2.10       | 853.700
+9          |   40      |pgAdmin 3 con spatialIndex| 853.700
+63         |   `-`     |mapshaper                 | 844.696
+43         |   22      |R + RStudio               | 830.043
 
 `-` prova non possibile! 
 
