@@ -123,7 +123,7 @@ Numero vertici estratti: 853.700
 time node  --max-old-space-size=4192 `which mapshaper` encoding=utf-8 Com01012018_g_wgs84.shp -points vertices -explode -o vertici_g_mapsh.shp
 ```
 
-**NB:** restituisce 9004 punti in meno rispetto a tutti gli altri software. (non capisco il perché!!!)
+**NB:** restituisce 9004 punti in meno rispetto a tutti gli altri software, questo è dovuto al fatto che lo svilippatore ha previsto di eliminare tutti i punti duplicati all'interno della stessa feature, vedasi [issues](https://github.com/mbloch/mapshaper/issues/307)
 
 Numero vertici estratti: 844.696
 
