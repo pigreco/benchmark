@@ -20,7 +20,7 @@ tempi in secondi: file-tabella/memoria
 
 **mapshaper** utility da riga di comando, fa benissimo alcune cose - vedi dissolve - ma non è completo (manca il buffer), comunque tre prove su 6 sono a suo favore; 
 
-**QGIS 2.18 LTR**  ha fatto la storia di QGIS ma andrà in pensione a ottobre 2018 dopo due anni di gloria!!!
+**QGIS 2.18 LTR**  ha fatto la storia di QGIS ma andrà in pensione a fine 2018 dopo due anni di gloria!!!
 
 **QGIS 3.2.x LR** come per tutte le regolar release, durerà solo 4 mesi!!!
 
