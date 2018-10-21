@@ -27,3 +27,5 @@ sbagliato
 # Borruso
 
 Esatto!!
+
+![foto](/img/aborruso.png)
