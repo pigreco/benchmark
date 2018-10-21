@@ -6,12 +6,12 @@
 ---
 ## secondo te, chi poteva trovare una cosa cosi scema??
 
-* totò
+* toto'
 * gbvitrano
 * aborruso
 
 --
-## totò
+## toto'
 
 sbagliato
 
