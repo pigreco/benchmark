@@ -28,4 +28,4 @@ sbagliato
 
 Esatto!!
 
-![foto](/img/aborruso.png)
+![foto](../img/aborruso.png)
