@@ -34,32 +34,61 @@
     <body>
 
         <div class="reveal">
-            <div class="slides"><section ><section data-markdown><script type="text/template">## secondo te, è una cosa utile??
+            <div class="slides"><section ><section data-markdown><script type="text/template"># Funzioni di aggregazione
 
-* si
-* no
-</script></section><section data-markdown><script type="text/template">
-yessss
-</script></section></section><section ><section data-markdown><script type="text/template">
-## secondo te, chi poteva trovare una cosa cosi scema??
+`relation_agregate` VS variabile `@parent`</script></section><section data-markdown><script type="text/template">
+![foto](./img/esempio/esempio_01.png)
 
-* toto'
-* gbvitrano
-* aborruso
-</script></section><section data-markdown><script type="text/template">
-## toto'
+Due layer: foglio e particelle</script></section></section><section ><section data-markdown><script type="text/template">
+## Definisco due relazioni di progetto</script></section><section data-markdown><script type="text/template">
+![foto](./img/esempio/esempio_02.png)</script></section></section><section ><section data-markdown><script type="text/template">
+espressione utilizzata per l'etichettatura:
 
-sbagliato
-</script></section><section data-markdown><script type="text/template">
-## gbvitano
+```
+'sup:,' ||  
+relation_aggregate( 
+relation:='rel_01', 
+aggregate:='concatenate', 
+expression:='dest: ' || "destinazio" ||': ' ||  "area_kmq" || ' kmq', 
+concatenator:=',') 
+|| ',_________________,' || 
+'sup_TOT: ' ||  
+relation_aggregate( 
+relation:='rela_02', 
+aggregate:='sum',  
+expression:="sup" ) 
+|| ' kmq'
+```</script></section><section data-markdown><script type="text/template">
+risultato:
 
-sbagliato
-</script></section><section data-markdown><script type="text/template">
-# Borruso
+![foto](./img/esempio/esempio_03.png)</script></section></section><section ><section data-markdown><script type="text/template">
+## Usando SOLO la variabile `@parent`
 
-Esatto!!
+espressione utilizzata per l'etichettatura:
 
-![foto](./img/aborruso.png)</script></section></section></div>
+```
+'sup:,' ||  
+aggregate( 
+layer:='virtual_layer', 
+aggregate:='concatenate', 
+expression:='dest: ' || "destinazio" ||': ' ||  "area_kmq" || ' kmq', 
+filter:= intersects($geometry, geometry(@parent)),
+concatenator:=',') 
+|| ',_________________,' || 
+'sup_TOT: ' ||  
+aggregate( 
+layer:='particella', 
+aggregate:='sum',  
+expression:="sup",
+filter:= intersects($geometry, geometry(@parent) ) )
+|| ' kmq'
+```</script></section><section data-markdown><script type="text/template">
+risultato:
+
+![foto](./img/esempio/esempio_03.png)</script></section></section><section  data-markdown><script type="text/template">
+Confronto:
+
+![foto](./img/esempio/esempio_04.png)</script></section></div>
         </div>
 
         <script src="lib/js/head.min.js"></script>
