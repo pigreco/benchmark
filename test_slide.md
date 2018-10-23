@@ -17,7 +17,7 @@ espressione utilizzata per l'etichettatura:
 relation_aggregate( 
 relation:='rel_01', 
 aggregate:='concatenate', 
-expression:='dest: ' || "destinazio" ||': ' ||  "area_kmq" || ' kmq', 
+expression:='dest: '||"destinazio"||': '||"area_kmq"||' kmq', 
 concatenator:=',') 
 || ',_________________,' || 
 'sup_TOT: ' ||  
@@ -41,7 +41,7 @@ espressione utilizzata per l'etichettatura:
 aggregate( 
 layer:='virtual_layer', 
 aggregate:='concatenate', 
-expression:='dest: ' || "destinazio" ||': ' ||  "area_kmq" || ' kmq', 
+expression:='dest: '||"destinazio" ||': '||"area_kmq"||' kmq', 
 filter:= intersects($geometry, geometry(@parent)),
 concatenator:=',') 
 || ',_________________,' || 
