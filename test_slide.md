@@ -2,13 +2,13 @@
 
 `relation_agregate` VS variabile `@parent`
 --
-![foto](../img/esempio/esempio_01.png)
+![foto](./img/esempio/esempio_01.png)
 
 Due layer: foglio e particelle
 ---
 ## Definisco due relazioni di progetto
 --
-![foto](../img/esempio/esempio_02.png)
+![foto](./img/esempio/esempio_02.png)
 ---
 espressione utilizzata per l'etichettatura:
 
@@ -30,7 +30,7 @@ expression:="sup" )
 --
 risultato:
 
-![foto](../img/esempio/esempio_03.png)
+![foto](./img/esempio/esempio_03.png)
 ---
 ## Usando SOLO la variabile `@parent`
 
@@ -56,8 +56,8 @@ filter:= intersects($geometry, geometry(@parent) ) )
 --
 risultato:
 
-![foto](../img/esempio/esempio_03.png)
+![foto](./img/esempio/esempio_03.png)
 ---
 Confronto:
 
-![foto](../img/esempio/esempio_04.png)
+![foto](./img/esempio/esempio_04.png)
