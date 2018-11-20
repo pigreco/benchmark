@@ -62,10 +62,16 @@ Comuni ISTAT     |nro vertici|senza duplicati | nro duplicati
 * [Mapshaper](https://mapshaper.org/) 0.4.94 (riga di comando - GNU/Linux - Ubuntu 16.4 in Win10 64b)
 
 ```
+## per installarlo
+
 sudo npm install -g mapshapersudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo npm install -g mapshaper
+
+## per aggiornarlo:
+
+sudo npm update -g mapshaper
 ```
 
 ![](./img/readme/sw.png)
