@@ -38,7 +38,7 @@ sistema:
 
 Confini delle unità amministrative a fini statistici al 1 gennaio 2018 -ISTAT - (anno 2018 - [versione generalizzata](https://www4.istat.it/it/archivio/209722)) cartella Com01012018_g. NB: gli shapefile dell'ISTAT hanno geometrie non valide, la correzione è stata fatta tramite spatialite_gui - leggere blog post su [pigrecoinfinito](https://pigrecoinfinito.wordpress.com/2018/03/23/gli-shapefile-istat-del-2018-non-sono-validi-ecco-come-correggerli-con-spatialite/)
 
-* [qui](./dati/com01012018_g_WGS84.zip) shapefile
+* [qui](./dati/com01012018_g_WGS84_ok.zip) shapefile
 * [qui](./dati/db_benchmark.zip) db sqlite
 
 Comuni ISTAT     |nro vertici|senza duplicati | nro duplicati
