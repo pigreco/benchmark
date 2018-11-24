@@ -129,6 +129,10 @@ Numero vertici estratti: 844.696
 
 ![](../img/estrai_v/mapshaper_01.png)
 
+**EDIT**: dopo issues lo sviluppatore ha implementato, per la funzione `-points`, l'opzione `-vertices2` ecco il risultato:
+
+![](../img/estrai_v/mapshaper_02.png)
+
 -->[torna su](#estrai-vertici-lz50)
 
 ## R + RStudio
