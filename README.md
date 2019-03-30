@@ -64,7 +64,8 @@ Comuni ISTAT     |nro vertici|senza duplicati | nro duplicati
 ```
 ## per installarlo
 
-sudo npm install -g mapshapersudo apt-get update
+sudo npm install -g mapshaper
+sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo npm install -g mapshaper
