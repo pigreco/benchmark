@@ -1,19 +1,7 @@
 # benchmark
 benchmark: due laptop e vari software GIS
 
-<!-- TOC -->
-
-- [benchmark](#benchmark)
-    - [Laptop Lenovo Z50 - SO windows 10 64 b (LZ50)](#laptop-lenovo-z50---so-windows-10-64-b-lz50)
-    - [xxxxxxxxxxxxxxxxx - SO windows 10 64 b (yyy)](#xxxxxxxxxxxxxxxxx---so-windows-10-64-b-yyy)
-    - [dataset](#dataset)
-    - [software GIS](#software-gis)
-    - [prove](#prove)
-    - [come eseguire le prove](#come-eseguire-le-prove)
-    - [Quadro sinottico prove](#quadro-sinottico-prove)
-    - [Osservazioni finali](#osservazioni-finali)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [benchmark](#benchmark)auto    - [Laptop Lenovo Z50 - SO windows 10 64 b (LZ50)](#laptop-lenovo-z50---so-windows-10-64-b-lz50)auto    - [xxxxxxxxxxxxxxxxx - SO windows 10 64 b (yyy)](#xxxxxxxxxxxxxxxxx---so-windows-10-64-b-yyy)auto    - [dataset](#dataset)auto    - [software GIS](#software-gis)auto    - [prove](#prove)auto    - [come eseguire le prove](#come-eseguire-le-prove)auto    - [[Quadro sinottico prove](./quadro_sinottico.md)](#quadro-sinottico-provequadro_sinotticomd)auto    - [Osservazioni finali](#osservazioni-finali)autoauto<!-- /TOC -->
 
 ## Laptop Lenovo Z50 - SO windows 10 64 b (LZ50)
 
@@ -58,7 +46,7 @@ Da QGIS:
 * [Mapshaper](https://mapshaper.org/) 0.4.94 (riga di comando - GNU/Linux - Ubuntu 16.4 in Win10 64b)
 
 ```
-sudo npm install -g mapshapersudo apt-get update
+sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo npm install -g mapshaper
