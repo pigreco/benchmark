@@ -52,6 +52,10 @@ sudo apt-get install npm
 sudo npm install -g mapshaper
 ```
 
+## per aggiornarlo:
+
+sudo npm update -g mapshaper
+
 ## prove
 
 1. [estrai vertici](./prove/estrai_vertici.md);
